@@ -19,6 +19,17 @@ const Header = () => {
     { icon: Mail, href: 'mailto:divine@example.com', label: 'Email' },
   ];
 
+  const handleNavClick = (href: string) => {
+    setIsMenuOpen(false);
+    // Small delay to ensure mobile menu closes before scrolling
+    setTimeout(() => {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,13 +44,13 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.name}
-                href={item.href}
-                className="text-foreground hover:text-accent transition-colors duration-300 font-medium"
+                onClick={() => handleNavClick(item.href)}
+                className="text-foreground hover:text-accent transition-colors duration-300 font-medium bg-transparent border-none cursor-pointer"
               >
                 {item.name}
-              </a>
+              </button>
             ))}
           </nav>
 
@@ -75,14 +86,13 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 space-y-4 animate-fade-in">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.name}
-                href={item.href}
-                className="block text-foreground hover:text-accent transition-colors duration-300 font-medium"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => handleNavClick(item.href)}
+                className="block text-foreground hover:text-accent transition-colors duration-300 font-medium bg-transparent border-none cursor-pointer w-full text-left"
               >
                 {item.name}
-              </a>
+              </button>
             ))}
             <div className="flex space-x-4 pt-4">
               {socialLinks.map((link) => (

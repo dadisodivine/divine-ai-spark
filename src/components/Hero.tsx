@@ -10,8 +10,8 @@ const Hero = () => {
   useEffect(() => {
     let index = 0;
     const timer = setInterval(() => {
-      if (index <= fullText.length) {
-        setDisplayText(fullText.slice(0, index));
+      if (index < fullText.length) {
+        setDisplayText(fullText.slice(0, index + 1));
         index++;
       } else {
         setIsTypingComplete(true);
@@ -20,7 +20,7 @@ const Hero = () => {
     }, 150);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [fullText]);
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center section-padding relative overflow-hidden">
@@ -30,7 +30,6 @@ const Hero = () => {
             <span className={`${!isTypingComplete ? 'typing-cursor' : ''}`}>
               {displayText}
             </span>
-            {isTypingComplete && <span className="gradient-text animate-bounce-in"> Divine</span>}
           </h1>
           <h2 className="text-2xl md:text-3xl text-muted-foreground mb-8 font-jetbrains animate-delayed-fade-in">
             Full-Stack Developer | AI-Powered Web Solutions
