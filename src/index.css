@@ -3,6 +3,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap');
+
 @layer base {
   :root {
     --background: 240 10% 3.9%;
@@ -164,10 +166,10 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-gradient-to-r from-primary to-accent hover:from-primary/80 hover:to-accent/80 text-white font-medium px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105;
+    @apply bg-gradient-to-r from-primary to-accent hover:from-primary/80 hover:to-accent/80 text-white font-medium px-5 py-2.5 rounded-lg transition-all duration-300 transform hover:scale-105;
   }
   
   .section-padding {
-    @apply px-4 sm:px-6 lg:px-8 py-16 lg:py-24;
+    @apply px-4 sm:px-6 lg:px-8 py-12 lg:py-16;
   }
 }
