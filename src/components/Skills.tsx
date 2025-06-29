@@ -1,15 +1,15 @@
 
-import { Code, Database, Github, Javascript, ReactIcon, Tailwind, Typescript } from 'lucide-react';
+import { Code, Database, Github, FileCode, Palette, Layers } from 'lucide-react';
 
 const Skills = () => {
   const skillCategories = [
     {
       title: 'Frontend Development',
       skills: [
-        { name: 'React', icon: ReactIcon, level: 95, color: 'text-blue-500' },
-        { name: 'TypeScript', icon: Typescript, level: 90, color: 'text-blue-600' },
-        { name: 'JavaScript', icon: Javascript, level: 95, color: 'text-yellow-500' },
-        { name: 'Tailwind CSS', icon: Tailwind, level: 90, color: 'text-cyan-500' },
+        { name: 'React', icon: Layers, level: 95, color: 'text-blue-500' },
+        { name: 'TypeScript', icon: FileCode, level: 90, color: 'text-blue-600' },
+        { name: 'JavaScript', icon: Code, level: 95, color: 'text-yellow-500' },
+        { name: 'Tailwind CSS', icon: Palette, level: 90, color: 'text-cyan-500' },
       ]
     },
     {
@@ -42,40 +42,52 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-12 bg-muted/30">
+    <section id="skills" className="py-8 bg-muted/30">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-10">
-          <h2 className="text-2xl font-bold mb-3 gradient-text">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold mb-4 gradient-text">
             Skills & Expertise
           </h2>
-          <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto">
             My technical toolkit spans modern web development technologies with a focus on AI integration.
           </p>
-          <div className="w-16 h-0.5 bg-gradient-to-r from-primary to-accent mx-auto mt-3"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto mt-4"></div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skillCategories.map((category, categoryIndex) => (
             <div 
               key={category.title}
-              className="bg-card border border-border rounded-lg p-4 hover:shadow-lg transition-all duration-300"
+              className="bg-card border border-border rounded-xl p-6 hover:shadow-lg transition-all duration-300 group"
             >
-              <h3 className="text-sm font-bold mb-4 text-center">{category.title}</h3>
+              <h3 className="text-lg font-bold mb-6 text-center text-primary">{category.title}</h3>
               
-              <div className="grid grid-cols-2 gap-3">
+              <div className="space-y-4">
                 {category.skills.map((skill) => {
                   const IconComponent = skill.icon;
                   return (
                     <div 
                       key={skill.name} 
-                      className="flex flex-col items-center p-2 rounded-lg hover:bg-muted/50 transition-colors group"
+                      className="flex items-center gap-4 p-3 rounded-lg hover:bg-muted/50 transition-colors group-hover:scale-105 transform duration-200"
                     >
-                      <IconComponent 
-                        size={24} 
-                        className={`${skill.color} mb-2 group-hover:scale-110 transition-transform`} 
-                      />
-                      <span className="text-xs font-medium text-center">{skill.name}</span>
-                      <span className="text-xs text-muted-foreground">{skill.level}%</span>
+                      <div className="flex-shrink-0">
+                        <IconComponent 
+                          size={32} 
+                          className={`${skill.color} transition-transform group-hover:scale-110`} 
+                        />
+                      </div>
+                      <div className="flex-1">
+                        <span className="font-medium text-sm block">{skill.name}</span>
+                        <div className="flex items-center gap-2 mt-1">
+                          <div className="flex-1 bg-muted rounded-full h-2">
+                            <div 
+                              className={`h-full ${skill.color.replace('text-', 'bg-')} rounded-full transition-all duration-1000`}
+                              style={{ width: `${skill.level}%` }}
+                            />
+                          </div>
+                          <span className="text-xs text-muted-foreground font-medium">{skill.level}%</span>
+                        </div>
+                      </div>
                     </div>
                   );
                 })}
