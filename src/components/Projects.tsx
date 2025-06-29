@@ -67,54 +67,54 @@ const Projects = () => {
 
   return (
     <section id="projects" className="section-padding">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
             Featured Projects
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
             Here are some of my most impactful projects that showcase my expertise in 
             full-stack development and AI integration.
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mt-6"></div>
+          <div className="w-20 h-0.5 bg-gradient-to-r from-primary to-accent mx-auto mt-4"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-2 gap-5">
           {projects.map((project, index) => (
             <div 
               key={project.id}
-              className={`bg-card border border-border rounded-2xl p-8 card-hover ${
+              className={`bg-card border border-border rounded-lg p-5 card-hover ${
                 index % 2 === 0 ? 'animate-slide-in-left' : 'animate-slide-in-right'
               }`}
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <div className="flex items-center gap-4 mb-6">
-                <div className="text-4xl">{project.logo}</div>
-                <h3 className="text-2xl font-bold gradient-text">{project.name}</h3>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="text-2xl">{project.logo}</div>
+                <h3 className="text-lg font-bold gradient-text">{project.name}</h3>
               </div>
 
-              <p className="text-muted-foreground mb-6 leading-relaxed">
+              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                 {project.description}
               </p>
 
-              <div className="space-y-4 mb-6">
+              <div className="space-y-3 mb-4">
                 <div>
-                  <h4 className="font-semibold text-red-400 mb-2">Problem:</h4>
-                  <p className="text-sm text-muted-foreground">{project.problem}</p>
+                  <h4 className="font-semibold text-red-400 mb-1 text-sm">Problem:</h4>
+                  <p className="text-xs text-muted-foreground">{project.problem}</p>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-green-400 mb-2">Solution:</h4>
-                  <p className="text-sm text-muted-foreground">{project.solution}</p>
+                  <h4 className="font-semibold text-green-400 mb-1 text-sm">Solution:</h4>
+                  <p className="text-xs text-muted-foreground">{project.solution}</p>
                 </div>
               </div>
 
-              <div className="mb-6">
-                <h4 className="font-semibold mb-3">Tech Stack:</h4>
-                <div className="flex flex-wrap gap-2">
+              <div className="mb-4">
+                <h4 className="font-semibold mb-2 text-sm">Tech Stack:</h4>
+                <div className="flex flex-wrap gap-1.5">
                   {project.techStack.map((tech) => (
                     <span 
                       key={tech}
-                      className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full border border-primary/20"
+                      className="px-2 py-0.5 bg-primary/10 text-primary text-xs rounded-full border border-primary/20"
                     >
                       {tech}
                     </span>
@@ -122,32 +122,32 @@ const Projects = () => {
                 </div>
               </div>
 
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2">
                 <a 
                   href={project.liveDemo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary to-accent text-white rounded-lg hover:opacity-90 transition-opacity font-medium"
+                  className="flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-primary to-accent text-white rounded-md hover:opacity-90 transition-opacity text-xs font-medium"
                 >
-                  <ExternalLink size={16} />
+                  <ExternalLink size={12} />
                   Live Demo
                 </a>
                 <a 
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 border border-accent text-accent hover:bg-accent hover:text-background transition-all duration-300 rounded-lg font-medium"
+                  className="flex items-center gap-1.5 px-3 py-1.5 border border-accent text-accent hover:bg-accent hover:text-background transition-all duration-300 rounded-md text-xs font-medium"
                 >
-                  <Github size={16} />
+                  <Github size={12} />
                   GitHub
                 </a>
                 <a 
                   href={project.youtube}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 border border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition-all duration-300 rounded-lg font-medium"
+                  className="flex items-center gap-1.5 px-3 py-1.5 border border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition-all duration-300 rounded-md text-xs font-medium"
                 >
-                  <Play size={16} />
+                  <Play size={12} />
                   Demo Video
                 </a>
               </div>
