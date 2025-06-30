@@ -25,7 +25,7 @@ const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center section-padding relative overflow-hidden">
       {/* Purple to blue gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-500 via-purple-600 to-blue-800"></div>
+      
       
       {/* Dark overlay for better text contrast */}
       <div className="absolute inset-0 bg-black/20"></div>
