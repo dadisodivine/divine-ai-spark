@@ -23,8 +23,7 @@ const Hero = () => {
   }, [fullText]);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center section-padding relative overflow-hidden">
-      {/* Purple to blue gradient background */}
+    <section id="home" className="min-h-screen flex items-center justify-center section-padding relative overflow-hidden bg-gradient-to-br from-primary via-primary/80 to-accent">
       <div className="max-w-6xl mx-auto text-center relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Text content */}
@@ -68,9 +67,9 @@ const Hero = () => {
           <div className="relative animate-delayed-fade-in-2">
             {/* Main circle with specialist count */}
             <div className="relative w-80 h-80 mx-auto">
-              <div className="absolute inset-0 rounded-full border-2 border-white/20"></div>
-              <div className="absolute inset-8 rounded-full border border-white/10"></div>
-              <div className="absolute inset-16 rounded-full border border-white/5"></div>
+              <div className="absolute inset-0 rounded-full border-2 border-white/30"></div>
+              <div className="absolute inset-8 rounded-full border border-white/20"></div>
+              <div className="absolute inset-16 rounded-full border border-white/10"></div>
               
               {/* Center content */}
               <div className="absolute inset-0 flex items-center justify-center">
@@ -81,47 +80,27 @@ const Hero = () => {
               </div>
 
               {/* Floating skill icons around the circle */}
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-4 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20">
-                <span className="text-white text-xs font-semibold">React</span>
-              </div>
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-4 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20">
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-4 w-12 h-12 bg-white/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
                 <span className="text-white text-xs font-semibold">React</span>
               </div>
               
-              <div className="absolute top-1/4 right-0 transform translate-x-4 -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20">
-                <span className="text-white text-xs font-semibold">Node/Express</span>
-              </div>
-                <div className="absolute top-1/4 right-0 transform translate-x-4 -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20">
+              <div className="absolute top-1/4 right-0 transform translate-x-4 -translate-y-1/2 w-16 h-12 bg-white/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
                 <span className="text-white text-xs font-semibold">Node/Express</span>
               </div>
               
-              
-              <div className="absolute bottom-1/4 right-0 transform translate-x-4 translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20">
-                <span className="text-white text-xs font-semibold">Next js</span>
-              </div>
-               <div className="absolute bottom-1/4 right-0 transform translate-x-4 translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20">
-                <span className="text-white text-xs font-semibold">Next js</span>
+              <div className="absolute bottom-1/4 right-0 transform translate-x-4 translate-y-1/2 w-12 h-12 bg-white/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
+                <span className="text-white text-xs font-semibold">Next.js</span>
               </div>
               
-              
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20">
-                <span className="text-white text-xs font-semibold">TS</span>
-              </div>
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20">
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4 w-12 h-12 bg-white/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
                 <span className="text-white text-xs font-semibold">TS</span>
               </div>
               
-              <div className="absolute bottom-1/4 left-0 transform -translate-x-4 translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20">
-                <span className="text-white text-xs font-semibold">Mongo/Firebase</span>
-              </div>
-               <div className="absolute bottom-1/4 left-0 transform -translate-x-4 translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20">
+              <div className="absolute bottom-1/4 left-0 transform -translate-x-4 translate-y-1/2 w-16 h-12 bg-white/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
                 <span className="text-white text-xs font-semibold">Mongo/Firebase</span>
               </div>
               
-              <div className="absolute top-1/4 left-0 transform -translate-x-4 -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20">
-                <span className="text-white text-xs font-semibold">CSS</span>
-              </div>
-               <div className="absolute top-1/4 left-0 transform -translate-x-4 -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20">
+              <div className="absolute top-1/4 left-0 transform -translate-x-4 -translate-y-1/2 w-12 h-12 bg-white/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
                 <span className="text-white text-xs font-semibold">CSS</span>
               </div>
             </div>
