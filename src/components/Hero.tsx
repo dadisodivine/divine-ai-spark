@@ -92,6 +92,10 @@ const Hero = () => {
               <div className="absolute bottom-1/4 right-0 transform translate-x-4 translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20">
                 <span className="text-white text-xs font-semibold">Next js</span>
               </div>
+               <div className="absolute bottom-1/4 right-0 transform translate-x-4 translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20">
+                <span className="text-white text-xs font-semibold">Next js</span>
+              </div>
+              
               
               <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20">
                 <span className="text-white text-xs font-semibold">TS</span>
