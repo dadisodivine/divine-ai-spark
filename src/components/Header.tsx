@@ -17,9 +17,9 @@ const Header = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/divine', label: 'GitHub' },
+    { icon: Github, href: 'https://github.com/dadisodivine', label: 'GitHub' },
     { icon: Linkedin, href: 'https://linkedin.com/in/divine', label: 'LinkedIn' },
-    { icon: Mail, href: 'mailto:divine@example.com', label: 'Email' },
+    { icon: Mail, href: 'mailto:dadisodivinenherera@gmail.com', label: 'Email' },
   ];
 
   const handleNavClick = (href: string) => {
@@ -41,12 +41,6 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold gradient-text">
-              &lt;Divine /&gt;
-            </h1>
-          </div>
-
           {/* Right side - Social links and controls */}
           <div className="flex items-center space-x-4">
             {/* Social Links */}
