@@ -86,7 +86,7 @@ const Hero = () => {
               </div>
               
               <div className="absolute top-1/4 right-0 transform translate-x-4 -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20">
-                <span className="text-white text-xs font-semibold">Node</span>
+                <span className="text-white text-xs font-semibold">Node/Express</span>
               </div>
               
               <div className="absolute bottom-1/4 right-0 transform translate-x-4 translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20">
@@ -98,7 +98,7 @@ const Hero = () => {
               </div>
               
               <div className="absolute bottom-1/4 left-0 transform -translate-x-4 translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20">
-                <span className="text-white text-xs font-semibold">Mongo</span>
+                <span className="text-white text-xs font-semibold">Mongo/Firebase</span>
               </div>
               
               <div className="absolute top-1/4 left-0 transform -translate-x-4 -translate-y-1/2 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/20">
