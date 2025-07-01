@@ -23,7 +23,7 @@ const Hero = () => {
   }, [fullText]);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center section-padding relative overflow-hidden bg-gradient-to-br from-gray-100 via-white to-gray-50 dark:bg-background">
+    <section id="home" className="min-h-screen flex items-center justify-center section-padding relative overflow-hidden bg-white dark:bg-black">
       <div className="max-w-6xl mx-auto text-center relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Text content */}
@@ -33,10 +33,10 @@ const Hero = () => {
                 {displayText}
               </span>
             </h1>
-            <h2 className="text-xl md:text-2xl text-gray-700 dark:text-white/90 mb-6 font-jetbrains animate-delayed-fade-in">
+            <h2 className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-6 font-jetbrains animate-delayed-fade-in">
               Full-Stack Developer | AI-Powered Web Solutions
             </h2>
-            <p className="text-base md:text-lg text-gray-600 dark:text-white/80 mb-8 max-w-2xl leading-relaxed animate-delayed-fade-in-2">
+            <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl leading-relaxed animate-delayed-fade-in-2">
               Based in <span className="text-primary font-semibold">Zimbabwe</span>, I create innovative web applications 
               using modern technologies like React, Node.js, and AI integrations to solve real-world problems.
             </p>
@@ -75,7 +75,7 @@ const Hero = () => {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
                   <div className="text-4xl font-bold text-primary mb-2">AI</div>
-                  <div className="text-muted-foreground text-sm">Generative AI</div>
+                  <div className="text-gray-600 dark:text-gray-400 text-sm">Generative AI</div>
                 </div>
               </div>
 
