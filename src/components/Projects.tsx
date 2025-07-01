@@ -1,7 +1,10 @@
 
 import { ExternalLink, Github, Play } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Projects = () => {
+  const navigate = useNavigate();
+
   const projects = [
     {
       id: 1,
@@ -65,6 +68,10 @@ const Projects = () => {
     }
   ];
 
+  const handleProjectClick = (projectId: number) => {
+    navigate(`/project/${projectId}`);
+  };
+
   return (
     <section id="projects" className="py-12">
       <div className="max-w-6xl mx-auto px-4">
@@ -83,7 +90,8 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div 
               key={project.id}
-              className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 group"
+              onClick={() => handleProjectClick(project.id)}
+              className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-all duration-300 group cursor-pointer"
             >
               <div className="relative overflow-hidden">
                 <img 
@@ -124,6 +132,7 @@ const Projects = () => {
                     href={project.liveDemo}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
                     className="flex items-center gap-1 px-3 py-1.5 bg-gradient-to-r from-primary to-accent text-white rounded-md hover:opacity-90 transition-opacity text-xs font-medium flex-1 justify-center"
                   >
                     <ExternalLink size={12} />
@@ -133,6 +142,7 @@ const Projects = () => {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
                     className="flex items-center gap-1 px-3 py-1.5 border border-accent text-accent hover:bg-accent hover:text-background transition-all duration-300 rounded-md text-xs font-medium"
                   >
                     <Github size={12} />
