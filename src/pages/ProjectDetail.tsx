@@ -1,4 +1,3 @@
-
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, ExternalLink, Github, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -36,6 +35,32 @@ const ProjectDetail = () => {
     },
     {
       id: 2,
+      name: 'Vibe Coding AI',
+      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=400&fit=crop',
+      screenshots: [
+        'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop',
+        'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop',
+        'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop'
+      ],
+      description: 'An AI-powered website builder that creates modern web applications through natural language conversations, similar to Lovable but with custom features.',
+      longDescription: 'Vibe Coding AI is a revolutionary website builder that transforms the way developers and non-developers create web applications. Through intuitive natural language conversations, users can describe their vision and watch as the AI generates responsive, modern web applications in real-time. The platform combines the power of advanced AI models with cutting-edge web technologies to deliver production-ready applications with custom styling, interactive components, and seamless user experiences.',
+      problem: 'Building web applications requires extensive coding knowledge and time investment.',
+      solution: 'AI-driven platform that generates responsive web apps from simple text descriptions and requirements.',
+      features: [
+        'Natural language to code generation',
+        'Real-time preview and editing',
+        'Responsive design automation',
+        'Component library integration',
+        'Custom styling and theming',
+        'Export and deployment options'
+      ],
+      techStack: ['React', 'TypeScript', 'OpenAI', 'Tailwind CSS', 'Vite', 'Node.js'],
+      liveDemo: 'https://vibe-coding-ai.com',
+      github: 'https://github.com/divine/vibe-coding-ai',
+      youtube: 'https://youtube.com/watch?v=example-vibe'
+    },
+    {
+      id: 3,
       name: 'PlantDoc AI',
       image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=400&fit=crop',
       screenshots: [
@@ -61,7 +86,7 @@ const ProjectDetail = () => {
       youtube: 'https://youtube.com/watch?v=example2'
     },
     {
-      id: 3,
+      id: 4,
       name: 'PromptPal',
       image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=400&fit=crop',
       screenshots: [
@@ -87,7 +112,7 @@ const ProjectDetail = () => {
       youtube: 'https://youtube.com/watch?v=example3'
     },
     {
-      id: 4,
+      id: 5,
       name: 'SocketTalk',
       image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=400&fit=crop',
       screenshots: [
@@ -113,7 +138,7 @@ const ProjectDetail = () => {
       youtube: 'https://youtube.com/watch?v=example4'
     },
     {
-      id: 5,
+      id: 6,
       name: 'Cartify',
       image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&h=400&fit=crop',
       screenshots: [

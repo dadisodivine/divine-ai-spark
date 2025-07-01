@@ -1,4 +1,3 @@
-
 import { ExternalLink, Github, Play } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
@@ -20,6 +19,18 @@ const Projects = () => {
     },
     {
       id: 2,
+      name: 'Vibe Coding AI',
+      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=250&fit=crop',
+      description: 'An AI-powered website builder that creates modern web applications through natural language conversations, similar to Lovable but with custom features.',
+      problem: 'Building web applications requires extensive coding knowledge and time investment.',
+      solution: 'AI-driven platform that generates responsive web apps from simple text descriptions and requirements.',
+      techStack: ['React', 'TypeScript', 'OpenAI', 'Tailwind CSS', 'Vite', 'Node.js'],
+      liveDemo: 'https://vibe-coding-ai.com',
+      github: 'https://github.com/divine/vibe-coding-ai',
+      youtube: 'https://youtube.com/watch?v=example-vibe'
+    },
+    {
+      id: 3,
       name: 'PlantDoc AI',
       image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=250&fit=crop',
       description: 'A plant disease detection tool using advanced image recognition to help African farmers identify and treat crop diseases quickly and accurately.',
@@ -31,7 +42,7 @@ const Projects = () => {
       youtube: 'https://youtube.com/watch?v=example2'
     },
     {
-      id: 3,
+      id: 4,
       name: 'PromptPal',
       image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=250&fit=crop',
       description: 'A personalized AI chatbot using LLMs like Mistral and OpenAI, providing intelligent prompt-based assistance for various tasks and conversations.',
@@ -43,7 +54,7 @@ const Projects = () => {
       youtube: 'https://youtube.com/watch?v=example3'
     },
     {
-      id: 4,
+      id: 5,
       name: 'SocketTalk',
       image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=250&fit=crop',
       description: 'A real-time chat application with advanced features like file sharing, emoji reactions, and group management using Socket.io and Firebase.',
@@ -55,7 +66,7 @@ const Projects = () => {
       youtube: 'https://youtube.com/watch?v=example4'
     },
     {
-      id: 5,
+      id: 6,
       name: 'Cartify',
       image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=400&h=250&fit=crop',
       description: 'A comprehensive e-commerce platform demonstrating full-stack development with complete CRUD operations, authentication, and payment integration.',
