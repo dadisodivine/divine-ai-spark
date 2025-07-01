@@ -23,7 +23,7 @@ const Hero = () => {
   }, [fullText]);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center section-padding relative overflow-hidden bg-white dark:bg-black">
+    <section id="home" className="min-h-screen flex items-center justify-center section-padding relative overflow-hidden bg-white dark:bg-black pt-20 md:pt-24">
       <div className="max-w-6xl mx-auto text-center relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Text content */}
