@@ -63,13 +63,14 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right side - Circular elements */}
+          {/* Right side - Spinning orbit with skill balls */}
           <div className="relative animate-delayed-fade-in-2">
-            {/* Main circle with specialist count */}
+            {/* Main spinning orbit container */}
             <div className="relative w-80 h-80 mx-auto">
-              <div className="absolute inset-0 rounded-full border-2 border-primary/30"></div>
-              <div className="absolute inset-8 rounded-full border border-primary/20"></div>
-              <div className="absolute inset-16 rounded-full border border-primary/10"></div>
+              {/* Spinning orbit rings */}
+              <div className="absolute inset-0 rounded-full border-2 border-primary/30 animate-spin" style={{ animationDuration: '20s' }}></div>
+              <div className="absolute inset-8 rounded-full border border-primary/20 animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }}></div>
+              <div className="absolute inset-16 rounded-full border border-primary/10 animate-spin" style={{ animationDuration: '25s' }}></div>
               
               {/* Center content */}
               <div className="absolute inset-0 flex items-center justify-center">
@@ -79,29 +80,70 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* Floating skill icons around the circle */}
-              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-4 w-12 h-12 bg-primary/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-primary/30">
-                <span className="text-primary text-xs font-semibold">React</span>
+              {/* Spinning skill balls around the orbit */}
+              <div className="absolute inset-0 animate-spin" style={{ animationDuration: '20s' }}>
+                {/* React - Top */}
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-4 w-12 h-12 bg-primary/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-primary/30">
+                  <span className="text-primary text-xs font-semibold">React</span>
+                </div>
+                
+                {/* Node/Express - Top Right */}
+                <div className="absolute top-1/4 right-0 transform translate-x-4 -translate-y-1/2 w-16 h-12 bg-primary/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-primary/30">
+                  <span className="text-primary text-xs font-semibold">Node.js</span>
+                </div>
+                
+                {/* TypeScript - Right */}
+                <div className="absolute top-1/2 right-0 transform translate-x-4 -translate-y-1/2 w-12 h-12 bg-primary/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-primary/30">
+                  <span className="text-primary text-xs font-semibold">TS</span>
+                </div>
+                
+                {/* Next.js - Bottom Right */}
+                <div className="absolute bottom-1/4 right-0 transform translate-x-4 translate-y-1/2 w-12 h-12 bg-primary/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-primary/30">
+                  <span className="text-primary text-xs font-semibold">Next.js</span>
+                </div>
+                
+                {/* Python - Bottom */}
+                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4 w-12 h-12 bg-primary/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-primary/30">
+                  <span className="text-primary text-xs font-semibold">Python</span>
+                </div>
+                
+                {/* MongoDB - Bottom Left */}
+                <div className="absolute bottom-1/4 left-0 transform -translate-x-4 translate-y-1/2 w-16 h-12 bg-primary/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-primary/30">
+                  <span className="text-primary text-xs font-semibold">MongoDB</span>
+                </div>
+                
+                {/* CSS - Left */}
+                <div className="absolute top-1/2 left-0 transform -translate-x-4 -translate-y-1/2 w-12 h-12 bg-primary/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-primary/30">
+                  <span className="text-primary text-xs font-semibold">CSS</span>
+                </div>
+                
+                {/* Firebase - Top Left */}
+                <div className="absolute top-1/4 left-0 transform -translate-x-4 -translate-y-1/2 w-12 h-12 bg-primary/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-primary/30">
+                  <span className="text-primary text-xs font-semibold">Firebase</span>
+                </div>
               </div>
-              
-              <div className="absolute top-1/4 right-0 transform translate-x-4 -translate-y-1/2 w-16 h-12 bg-primary/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-primary/30">
-                <span className="text-primary text-xs font-semibold">Node/Express</span>
-              </div>
-              
-              <div className="absolute bottom-1/4 right-0 transform translate-x-4 translate-y-1/2 w-12 h-12 bg-primary/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-primary/30">
-                <span className="text-primary text-xs font-semibold">Next.js</span>
-              </div>
-              
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4 w-12 h-12 bg-primary/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-primary/30">
-                <span className="text-primary text-xs font-semibold">TS</span>
-              </div>
-              
-              <div className="absolute bottom-1/4 left-0 transform -translate-x-4 translate-y-1/2 w-16 h-12 bg-primary/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-primary/30">
-                <span className="text-primary text-xs font-semibold">Mongo/Firebase</span>
-              </div>
-              
-              <div className="absolute top-1/4 left-0 transform -translate-x-4 -translate-y-1/2 w-12 h-12 bg-primary/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-primary/30">
-                <span className="text-primary text-xs font-semibold">CSS</span>
+
+              {/* Counter-spinning inner skill balls */}
+              <div className="absolute inset-8 animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }}>
+                {/* Docker */}
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-10 h-10 bg-accent/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-accent/30">
+                  <span className="text-accent text-xs font-semibold">Docker</span>
+                </div>
+                
+                {/* Git */}
+                <div className="absolute top-1/2 right-0 transform translate-x-2 -translate-y-1/2 w-8 h-8 bg-accent/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-accent/30">
+                  <span className="text-accent text-xs font-semibold">Git</span>
+                </div>
+                
+                {/* AWS */}
+                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-2 w-9 h-9 bg-accent/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-accent/30">
+                  <span className="text-accent text-xs font-semibold">AWS</span>
+                </div>
+                
+                {/* GraphQL */}
+                <div className="absolute top-1/2 left-0 transform -translate-x-2 -translate-y-1/2 w-10 h-10 bg-accent/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-accent/30">
+                  <span className="text-accent text-xs font-semibold">GraphQL</span>
+                </div>
               </div>
             </div>
           </div>
