@@ -71,58 +71,60 @@ const Skills = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mt-6 rounded-full animate-delayed-fade-in-2"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8">
+        <div className="space-y-12">
           {skillCategories.map((category, categoryIndex) => (
             <div 
               key={category.title}
               className="group relative animate-fade-in"
-              style={{ animationDelay: `${categoryIndex * 0.15}s` }}
+              style={{ animationDelay: `${categoryIndex * 0.2}s` }}
             >
               {/* Glowing background effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${category.gradient} rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700 scale-105`}></div>
+              <div className={`absolute inset-0 bg-gradient-to-r ${category.gradient} rounded-3xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700 scale-105`}></div>
               
-              <div className="relative bg-white/90 dark:bg-gray-800/80 backdrop-blur-lg border border-gray-200/50 dark:border-gray-700/50 rounded-3xl p-8 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 group-hover:scale-[1.02] group-hover:-translate-y-2">
+              <div className="relative bg-white/90 dark:bg-gray-800/80 backdrop-blur-lg border border-gray-200/50 dark:border-gray-700/50 rounded-3xl p-8 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 group-hover:scale-[1.02]">
                 {/* Category header */}
-                <div className="text-center mb-8">
-                  <div className="relative w-20 h-20 mx-auto mb-6">
+                <div className="flex items-center mb-8">
+                  <div className="relative w-16 h-16 mr-6">
                     <div className={`absolute inset-0 bg-gradient-to-br ${category.gradient} rounded-2xl rotate-6 group-hover:rotate-12 transition-transform duration-500`}></div>
                     <div className="relative w-full h-full bg-white dark:bg-gray-800 rounded-2xl flex items-center justify-center shadow-lg">
-                      <div className={`w-10 h-10 bg-gradient-to-br ${category.gradient} rounded-xl flex items-center justify-center`}>
-                        <div className="w-6 h-6 bg-white dark:bg-gray-800 rounded-md"></div>
+                      <div className={`w-8 h-8 bg-gradient-to-br ${category.gradient} rounded-xl flex items-center justify-center`}>
+                        <div className="w-4 h-4 bg-white dark:bg-gray-800 rounded-md"></div>
                       </div>
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">{category.title}</h3>
-                  <div className="w-12 h-0.5 bg-gradient-to-r from-primary to-accent mx-auto rounded-full"></div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">{category.title}</h3>
+                    <div className="w-20 h-0.5 bg-gradient-to-r from-primary to-accent rounded-full"></div>
+                  </div>
                 </div>
                 
-                {/* Skills list */}
-                <div className="space-y-5">
+                {/* Skills list - horizontal layout */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                   {category.skills.map((skill, skillIndex) => {
                     const IconComponent = skill.icon;
                     return (
                       <div 
                         key={skill.name} 
-                        className="group/skill relative overflow-hidden rounded-2xl bg-gray-50/80 dark:bg-gray-700/50 hover:bg-white dark:hover:bg-gray-600/70 transition-all duration-300 p-4"
+                        className="group/skill relative overflow-hidden rounded-2xl bg-gray-50/80 dark:bg-gray-700/50 hover:bg-white dark:hover:bg-gray-600/70 transition-all duration-300 p-6 text-center"
                         style={{ animationDelay: `${(categoryIndex * 4 + skillIndex) * 0.1}s` }}
                       >
-                        {/* Skill content */}
-                        <div className="flex items-center justify-between mb-3">
-                          <div className="flex items-center">
-                            <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-white dark:bg-gray-700 shadow-lg flex items-center justify-center mr-4 group-hover/skill:scale-110 transition-transform duration-300">
-                              <IconComponent 
-                                size={20} 
-                                className={`${skill.color} transition-all duration-300 group-hover/skill:rotate-12`} 
-                              />
-                            </div>
-                            <div>
-                              <span className="font-semibold text-gray-800 dark:text-gray-200 text-sm">
-                                {skill.name}
-                              </span>
-                              <div className="text-xs text-gray-500 dark:text-gray-400">
-                                {skill.level}% proficiency
-                              </div>
-                            </div>
+                        {/* Skill icon */}
+                        <div className="flex justify-center mb-4">
+                          <div className="w-16 h-16 rounded-xl bg-white dark:bg-gray-700 shadow-lg flex items-center justify-center group-hover/skill:scale-110 transition-transform duration-300">
+                            <IconComponent 
+                              size={24} 
+                              className={`${skill.color} transition-all duration-300 group-hover/skill:rotate-12`} 
+                            />
+                          </div>
+                        </div>
+
+                        {/* Skill name and level */}
+                        <div className="mb-4">
+                          <span className="font-semibold text-gray-800 dark:text-gray-200 text-lg block mb-1">
+                            {skill.name}
+                          </span>
+                          <div className="text-sm text-gray-500 dark:text-gray-400">
+                            {skill.level}% proficiency
                           </div>
                         </div>
 
