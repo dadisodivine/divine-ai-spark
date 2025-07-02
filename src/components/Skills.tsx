@@ -6,40 +6,40 @@ const Skills = () => {
     {
       title: 'Frontend Development',
       skills: [
-        { name: 'React', icon: Layers, color: 'text-blue-500', level: 95 },
-        { name: 'TypeScript', icon: FileCode, color: 'text-blue-600', level: 90 },
-        { name: 'JavaScript', icon: Code, color: 'text-yellow-500', level: 92 },
-        { name: 'Tailwind CSS', icon: Palette, color: 'text-cyan-500', level: 88 },
+        { name: 'React', icon: Layers, color: 'text-blue-500' },
+        { name: 'TypeScript', icon: FileCode, color: 'text-blue-600' },
+        { name: 'JavaScript', icon: Code, color: 'text-yellow-500' },
+        { name: 'Tailwind CSS', icon: Palette, color: 'text-cyan-500' },
       ],
       gradient: 'from-blue-500/20 to-cyan-500/20'
     },
     {
       title: 'Backend Development',
       skills: [
-        { name: 'Node.js', icon: Server, color: 'text-green-500', level: 85 },
-        { name: 'Express.js', icon: Zap, color: 'text-gray-600 dark:text-gray-300', level: 82 },
-        { name: 'MongoDB', icon: Database, color: 'text-green-600', level: 80 },
-        { name: 'REST APIs', icon: Globe, color: 'text-purple-500', level: 87 },
+        { name: 'Node.js', icon: Server, color: 'text-green-500' },
+        { name: 'Express.js', icon: Zap, color: 'text-gray-600 dark:text-gray-300' },
+        { name: 'MongoDB', icon: Database, color: 'text-green-600' },
+        { name: 'REST APIs', icon: Globe, color: 'text-purple-500' },
       ],
       gradient: 'from-green-500/20 to-purple-500/20'
     },
     {
       title: 'AI & Machine Learning',
       skills: [
-        { name: 'OpenAI Integration', icon: Brain, color: 'text-emerald-500', level: 88 },
-        { name: 'Mistral AI', icon: Brain, color: 'text-orange-500', level: 85 },
-        { name: 'TensorFlow.js', icon: Brain, color: 'text-orange-600', level: 75 },
-        { name: 'Prompt Engineering', icon: FileCode, color: 'text-indigo-500', level: 90 },
+        { name: 'OpenAI Integration', icon: Brain, color: 'text-emerald-500' },
+        { name: 'Mistral AI', icon: Brain, color: 'text-orange-500' },
+        { name: 'TensorFlow.js', icon: Brain, color: 'text-orange-600' },
+        { name: 'Prompt Engineering', icon: FileCode, color: 'text-indigo-500' },
       ],
       gradient: 'from-emerald-500/20 to-orange-500/20'
     },
     {
       title: 'Tools & Technologies',
       skills: [
-        { name: 'Git & GitHub', icon: Github, color: 'text-gray-700 dark:text-gray-300', level: 92 },
-        { name: 'Docker', icon: Settings, color: 'text-blue-500', level: 78 },
-        { name: 'Socket.io', icon: Zap, color: 'text-green-500', level: 80 },
-        { name: 'JWT Auth', icon: Shield, color: 'text-red-500', level: 85 },
+        { name: 'Git & GitHub', icon: Github, color: 'text-gray-700 dark:text-gray-300' },
+        { name: 'Docker', icon: Settings, color: 'text-blue-500' },
+        { name: 'Socket.io', icon: Zap, color: 'text-green-500' },
+        { name: 'JWT Auth', icon: Shield, color: 'text-red-500' },
       ],
       gradient: 'from-gray-500/20 to-red-500/20'
     }
@@ -54,7 +54,7 @@ const Skills = () => {
         <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-primary/3 rounded-full blur-2xl animate-float"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 relative z-10">
+      <div className="max-w-4xl mx-auto px-8 lg:px-12 relative z-10">
         <div className="text-center mb-16">
           <div className="inline-block mb-4">
             <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
@@ -83,7 +83,7 @@ const Skills = () => {
               
               <div className="relative bg-white/90 dark:bg-gray-800/80 backdrop-blur-lg border border-gray-200/50 dark:border-gray-700/50 rounded-3xl p-8 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500 group-hover:scale-[1.02]">
                 {/* Category header */}
-                <div className="flex items-center mb-8">
+                <div className="flex items-center justify-center mb-8">
                   <div className="relative w-16 h-16 mr-6">
                     <div className={`absolute inset-0 bg-gradient-to-br ${category.gradient} rounded-2xl rotate-6 group-hover:rotate-12 transition-transform duration-500`}></div>
                     <div className="relative w-full h-full bg-white dark:bg-gray-800 rounded-2xl flex items-center justify-center shadow-lg">
@@ -118,26 +118,11 @@ const Skills = () => {
                           </div>
                         </div>
 
-                        {/* Skill name and level */}
-                        <div className="mb-4">
-                          <span className="font-semibold text-gray-800 dark:text-gray-200 text-lg block mb-1">
+                        {/* Skill name */}
+                        <div className="mb-2">
+                          <span className="font-semibold text-gray-800 dark:text-gray-200 text-lg block">
                             {skill.name}
                           </span>
-                          <div className="text-sm text-gray-500 dark:text-gray-400">
-                            {skill.level}% proficiency
-                          </div>
-                        </div>
-
-                        {/* Progress bar */}
-                        <div className="relative h-2 bg-gray-200 dark:bg-gray-600 rounded-full overflow-hidden">
-                          <div 
-                            className={`absolute top-0 left-0 h-full bg-gradient-to-r ${category.gradient.replace('/20', '')} rounded-full transition-all duration-1000 ease-out group-hover/skill:animate-pulse`}
-                            style={{ 
-                              width: `${skill.level}%`,
-                              animationDelay: `${(categoryIndex * 4 + skillIndex) * 0.2}s`
-                            }}
-                          ></div>
-                          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent animate-pulse"></div>
                         </div>
 
                         {/* Hover glow effect */}
