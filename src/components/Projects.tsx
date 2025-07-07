@@ -8,7 +8,7 @@ const Projects = () => {
     {
       id: 1,
       name: 'GitMate',
-      image: '/src/gitmate (1).png',
+      image: '/gitmate (1).png',
       description: 'An AI-powered developer tool that connects to GitHub, analyzes codebases, and provides intelligent explanations, refactoring suggestions, and code insights.',
       problem: 'Developers struggle to understand complex codebases and need AI assistance for code analysis.',
       solution: 'GitMate integrates with GitHub APIs and uses AI models to provide contextual code explanations and suggestions.',
@@ -19,7 +19,7 @@ const Projects = () => {
     {
       id: 2,
       name: 'Vibe Coding AI',
-      image: '/src/cartify (1).png',
+      image: '/cartify (1).png',
       description: 'An AI-powered website builder that creates modern web applications through natural language conversations, similar to Lovable but with custom features.',
       problem: 'Building web applications requires extensive coding knowledge and time investment.',
       solution: 'AI-driven platform that generates responsive web apps from simple text descriptions and requirements.',
@@ -30,7 +30,7 @@ const Projects = () => {
     {
       id: 3,
       name: 'PlantDoc AI',
-      image: '/src/Plantdoc (1).png',
+      image: '/Plantdoc (1).png',
       description: 'A plant disease detection tool using advanced image recognition to help African farmers identify and treat crop diseases quickly and accurately.',
       problem: 'African farmers lack access to plant disease diagnosis, leading to crop losses.',
       solution: 'AI-powered image recognition provides instant disease detection and treatment recommendations.',
@@ -41,7 +41,7 @@ const Projects = () => {
     {
       id: 4,
       name: 'SmartChat',
-      image: '/src/Chatbot (1).png',
+      image: '/Chatbot (1).png',
       description: 'A personalized AI chatbot using LLMs like Mistral and OpenAI, providing intelligent prompt-based assistance for various tasks and conversations.',
       problem: 'Users need a personalized AI assistant that understands their specific needs and preferences.',
       solution: 'Custom chatbot with advanced prompt engineering and conversation memory.',
@@ -52,7 +52,7 @@ const Projects = () => {
     {
       id: 5,
       name: 'Chatter',
-      image: '/src/ChitChat (1).png',
+      image: '/ChitChat (1).png',
       description: 'A real-time chat application with advanced features like file sharing, emoji reactions, and group management using Socket.io and Firebase.',
       problem: 'Need for reliable real-time communication platform with modern features.',
       solution: 'Built with Socket.io for real-time messaging and Firebase for authentication and data persistence.',
@@ -63,7 +63,7 @@ const Projects = () => {
     {
       id: 6,
       name: 'Cartify',
-      image: '/src/cartify (2).png',
+      image: '/cartify (2).png',
       description: 'A comprehensive e-commerce platform demonstrating full-stack development with complete CRUD operations, authentication, and payment integration.',
       problem: 'Showcase complete e-commerce functionality with modern web technologies.',
       solution: 'Full-featured online store with cart management, user authentication, and secure checkout.',
