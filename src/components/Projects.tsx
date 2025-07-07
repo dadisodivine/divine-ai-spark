@@ -1,6 +1,6 @@
 import { ExternalLink, Github, Play } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import gitmate1 from '../gitmate (1).png'
+import gitmate1 from '../gitmate(1).png'
 
 const Projects = () => {
   const navigate = useNavigate();
@@ -21,7 +21,7 @@ const Projects = () => {
     {
       id: 2,
       name: 'Vibe Coding AI',
-      image: '/src/cartify (1).png',
+      image: '/src/cartify(1).png',
       description: 'An AI-powered website builder that creates modern web applications through natural language conversations, similar to Lovable but with custom features.',
       problem: 'Building web applications requires extensive coding knowledge and time investment.',
       solution: 'AI-driven platform that generates responsive web apps from simple text descriptions and requirements.',
