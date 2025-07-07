@@ -13,9 +13,8 @@ const Projects = () => {
       problem: 'Developers struggle to understand complex codebases and need AI assistance for code analysis.',
       solution: 'GitMate integrates with GitHub APIs and uses AI models to provide contextual code explanations and suggestions.',
       techStack: ['React', 'Node.js', 'GitHub API', 'OpenAI', 'Express', 'MongoDB'],
-      liveDemo: 'https://gitmate-demo.com',
-      github: 'https://github.com/divine/gitmate',
-      youtube: 'https://youtube.com/watch?v=example1'
+      liveDemo: 'https://gitmate-frontend.onrender.com',
+      github: 'https://github.com/divine/gitmate'
     },
     {
       id: 2,
@@ -26,8 +25,7 @@ const Projects = () => {
       solution: 'AI-driven platform that generates responsive web apps from simple text descriptions and requirements.',
       techStack: ['React', 'TypeScript', 'OpenAI', 'Tailwind CSS', 'Vite', 'Node.js'],
       liveDemo: 'https://vibe-coding-ai.com',
-      github: 'https://github.com/divine/vibe-coding-ai',
-      youtube: 'https://youtube.com/watch?v=example-vibe'
+      github: 'https://github.com/divine/vibe-coding-ai'
     },
     {
       id: 3,
@@ -37,33 +35,30 @@ const Projects = () => {
       problem: 'African farmers lack access to plant disease diagnosis, leading to crop losses.',
       solution: 'AI-powered image recognition provides instant disease detection and treatment recommendations.',
       techStack: ['React', 'TensorFlow.js', 'Node.js', 'Python', 'Image Recognition', 'Firebase'],
-      liveDemo: 'https://plantdoc-ai.com',
-      github: 'https://github.com/divine/plantdoc-ai',
-      youtube: 'https://youtube.com/watch?v=example2'
+      liveDemo: 'https://plantdoc-sruf.onrender.com',
+      github: 'https://github.com/divine/plantdoc-ai'
     },
     {
       id: 4,
-      name: 'PromptPal',
+      name: 'SmartChat',
       image: '/src/Chatbot (1).png',
       description: 'A personalized AI chatbot using LLMs like Mistral and OpenAI, providing intelligent prompt-based assistance for various tasks and conversations.',
       problem: 'Users need a personalized AI assistant that understands their specific needs and preferences.',
       solution: 'Custom chatbot with advanced prompt engineering and conversation memory.',
       techStack: ['React', 'Node.js', 'Mistral AI', 'OpenAI', 'WebSocket', 'Redis'],
-      liveDemo: 'https://promptpal.com',
-      github: 'https://github.com/divine/promptpal',
-      youtube: 'https://youtube.com/watch?v=example3'
+      liveDemo: 'https://chatbot-frontend-c7xo.onrender.com',
+      github: 'https://github.com/divine/promptpal'
     },
     {
       id: 5,
-      name: 'SocketTalk',
+      name: 'Chatter',
       image: '/src/ChitChat (1).png',
       description: 'A real-time chat application with advanced features like file sharing, emoji reactions, and group management using Socket.io and Firebase.',
       problem: 'Need for reliable real-time communication platform with modern features.',
       solution: 'Built with Socket.io for real-time messaging and Firebase for authentication and data persistence.',
       techStack: ['React', 'Socket.io', 'Firebase', 'Node.js', 'Express', 'Material-UI'],
-      liveDemo: 'https://sockettalk.com',
-      github: 'https://github.com/divine/sockettalk',
-      youtube: 'https://youtube.com/watch?v=example4'
+      liveDemo: 'https://chat-app-x9f9.onrender.com',
+      github: 'https://github.com/divine/sockettalk'
     },
     {
       id: 6,
@@ -73,9 +68,8 @@ const Projects = () => {
       problem: 'Showcase complete e-commerce functionality with modern web technologies.',
       solution: 'Full-featured online store with cart management, user authentication, and secure checkout.',
       techStack: ['React', 'Node.js', 'MongoDB', 'Stripe', 'JWT', 'Express'],
-      liveDemo: 'https://cartify-demo.com',
-      github: 'https://github.com/divine/cartify',
-      youtube: 'https://youtube.com/watch?v=example5'
+      liveDemo: 'https://e-store-hw1f.onrender.com',
+      github: 'https://github.com/divine/cartify'
     }
   ];
 
