@@ -8,7 +8,7 @@ const Projects = () => {
     {
       id: 1,
       name: 'GitMate',
-      image: '/src/gitmate (1).png',
+      image: './src/gitmate (1).png',
       description: 'An AI-powered developer tool that connects to GitHub, analyzes codebases, and provides intelligent explanations, refactoring suggestions, and code insights.',
       problem: 'Developers struggle to understand complex codebases and need AI assistance for code analysis.',
       solution: 'GitMate integrates with GitHub APIs and uses AI models to provide contextual code explanations and suggestions.',
