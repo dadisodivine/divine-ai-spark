@@ -1,6 +1,6 @@
 import { ExternalLink, Github, Play } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import gitmate1 from './src/gitmate (1).png'
+import gitmate1 from '../gitmate (1).png'
 
 const Projects = () => {
   const navigate = useNavigate();
