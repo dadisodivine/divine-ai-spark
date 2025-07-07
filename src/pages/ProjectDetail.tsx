@@ -10,11 +10,11 @@ const ProjectDetail = () => {
     {
       id: 1,
       name: 'GitMate',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&h=400&fit=crop',
+      image: '/src/gitmate (1).png',
       screenshots: [
-        'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop',
-        'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&h=400&fit=crop',
-        'https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=600&h=400&fit=crop'
+        '/src/gitmate (1).png',
+        '/src/gitmate (2).png',
+        '/src/gitmate (3).png'
       ],
       description: 'An AI-powered developer tool that connects to GitHub, analyzes codebases, and provides intelligent explanations, refactoring suggestions, and code insights.',
       longDescription: 'GitMate revolutionizes how developers interact with codebases by providing AI-powered insights and analysis. The tool seamlessly integrates with GitHub repositories, offering real-time code explanations, intelligent refactoring suggestions, and comprehensive codebase documentation. Built with modern technologies, GitMate helps developers understand complex code structures, identify potential issues, and improve code quality through AI-driven recommendations.',
@@ -36,11 +36,11 @@ const ProjectDetail = () => {
     {
       id: 2,
       name: 'Vibe Coding AI',
-      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=400&fit=crop',
+      image: '/src/cartify (1).png',
       screenshots: [
-        'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop',
-        'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop',
-        'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop'
+        '/src/cartify (1).png',
+        '/src/cartify (2).png',
+        '/src/cartify (3).png'
       ],
       description: 'An AI-powered website builder that creates modern web applications through natural language conversations, similar to Lovable but with custom features.',
       longDescription: 'Vibe Coding AI is a revolutionary website builder that transforms the way developers and non-developers create web applications. Through intuitive natural language conversations, users can describe their vision and watch as the AI generates responsive, modern web applications in real-time. The platform combines the power of advanced AI models with cutting-edge web technologies to deliver production-ready applications with custom styling, interactive components, and seamless user experiences.',
@@ -62,11 +62,11 @@ const ProjectDetail = () => {
     {
       id: 3,
       name: 'PlantDoc AI',
-      image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=400&fit=crop',
+      image: '/src/Plantdoc (1).png',
       screenshots: [
-        'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&h=400&fit=crop',
-        'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=400&fit=crop',
-        'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=600&h=400&fit=crop'
+        '/src/Plantdoc (1).png',
+        '/src/Plantdoc (2).png',
+        '/src/Plantdoc (3).png'
       ],
       description: 'A plant disease detection tool using advanced image recognition to help African farmers identify and treat crop diseases quickly and accurately.',
       longDescription: 'PlantDoc AI addresses the critical need for accessible plant disease diagnosis in agricultural communities. Using advanced machine learning and computer vision, the application can identify various plant diseases from photographs, providing instant diagnosis and treatment recommendations. The tool is specifically designed for African farmers, offering multilingual support and offline capabilities to ensure accessibility in remote areas.',
@@ -88,11 +88,11 @@ const ProjectDetail = () => {
     {
       id: 4,
       name: 'PromptPal',
-      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&h=400&fit=crop',
+      image: '/src/Chatbot (1).png',
       screenshots: [
-        'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop',
-        'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600&h=400&fit=crop',
-        'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop'
+        '/src/Chatbot (1).png',
+        '/src/Chatbot (2).png',
+        '/src/Chatbot (3).png'
       ],
       description: 'A personalized AI chatbot using LLMs like Mistral and OpenAI, providing intelligent prompt-based assistance for various tasks and conversations.',
       longDescription: 'PromptPal is an advanced AI chatbot platform that leverages multiple Large Language Models to provide personalized assistance. The application features sophisticated prompt engineering, conversation memory, and adaptive learning capabilities. Users can customize their AI assistant for specific tasks, from creative writing to technical problem-solving, with the system learning and adapting to individual preferences over time.',
@@ -114,11 +114,11 @@ const ProjectDetail = () => {
     {
       id: 5,
       name: 'SocketTalk',
-      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=400&fit=crop',
+      image: '/src/ChitChat (1).png',
       screenshots: [
-        'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop',
-        'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=400&fit=crop',
-        'https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=400&fit=crop'
+        '/src/ChitChat (1).png',
+        '/src/ChitChat (2).png',
+        '/src/ChitChat (3).png'
       ],
       description: 'A real-time chat application with advanced features like file sharing, emoji reactions, and group management using Socket.io and Firebase.',
       longDescription: 'SocketTalk is a comprehensive real-time communication platform built for modern teams and communities. The application features instant messaging, file sharing, emoji reactions, and advanced group management capabilities. With robust real-time synchronization powered by Socket.io and reliable data persistence through Firebase, SocketTalk provides a seamless communication experience across all devices.',
@@ -140,11 +140,11 @@ const ProjectDetail = () => {
     {
       id: 6,
       name: 'Cartify',
-      image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=800&h=400&fit=crop',
+      image: '/src/cartify (4).png',
       screenshots: [
-        'https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600&h=400&fit=crop',
-        'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
-        'https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=600&h=400&fit=crop'
+        '/src/cartify (4).png',
+        '/src/cartify (5).png',
+        '/src/cartify (6).png'
       ],
       description: 'A comprehensive e-commerce platform demonstrating full-stack development with complete CRUD operations, authentication, and payment integration.',
       longDescription: 'Cartify is a full-featured e-commerce platform showcasing modern web development practices. The application includes complete product management, user authentication, shopping cart functionality, and secure payment processing. Built with scalability in mind, Cartify demonstrates best practices in full-stack development, from responsive frontend design to robust backend architecture and secure payment integration.',
