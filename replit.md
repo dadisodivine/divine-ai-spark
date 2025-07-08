@@ -99,8 +99,11 @@ This is a modern full-stack portfolio web application showcasing AI-powered proj
 ## Changelog
 
 Changelog:
-- July 08, 2025. Initial setup
+- July 08, 2025. Initial setup and successful migration from Lovable to Replit
+- July 08, 2025. Fixed CSS import order and font configuration for Poppins font family
+- July 08, 2025. Installed missing dependencies: react-router-dom, sonner
 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+Font preference: Poppins font family throughout the application.
