@@ -6,7 +6,9 @@ import { Button } from "@/components/ui/button";
 const ProjectDetail = () => {
   const { id } = useParams();
   const [, setLocation] = useLocation();
-  const [loadingImages, setLoadingImages] = useState<Record<number, boolean>>({});
+  const [loadingImages, setLoadingImages] = useState<Record<number, boolean>>(
+    {},
+  );
   const [heroImageLoading, setHeroImageLoading] = useState(true);
 
   // Scroll to top when component mounts or id changes
@@ -16,11 +18,11 @@ const ProjectDetail = () => {
   }, [id]);
 
   const handleImageLoad = (index: number) => {
-    setLoadingImages(prev => ({ ...prev, [index]: false }));
+    setLoadingImages((prev) => ({ ...prev, [index]: false }));
   };
 
   const handleImageLoadStart = (index: number) => {
-    setLoadingImages(prev => ({ ...prev, [index]: true }));
+    setLoadingImages((prev) => ({ ...prev, [index]: true }));
   };
 
   const projects = [
@@ -62,7 +64,7 @@ const ProjectDetail = () => {
         "Firebase Auth",
       ],
       liveDemo: "https://gitmate-frontend.onrender.com",
-      github: "https://github.com/divine/gitmate",
+      github: "https://github.com/dadisodivine/GitMate",
     },
     {
       id: 2,
@@ -138,7 +140,7 @@ const ProjectDetail = () => {
         "Google Gemini",
       ],
       liveDemo: "https://plantdoc-sruf.onrender.com",
-      github: "https://github.com/divine/plantdoc-ai",
+      github: "https://github.com/dadisodivine/PlantDoc",
     },
     {
       id: 4,
@@ -163,7 +165,7 @@ const ProjectDetail = () => {
       ],
       techStack: ["React", "Node.js", "Express.js", "Mistral AI", "OpenAI"],
       liveDemo: "https://chatbot-frontend-c7xo.onrender.com",
-      github: "https://github.com/divine/promptpal",
+      github: "https://github.com/dadisodivine/Chat-App",
     },
     {
       id: 5,
@@ -193,7 +195,7 @@ const ProjectDetail = () => {
       ],
       techStack: ["React", "Firebase"],
       liveDemo: "https://chat-app-x9f9.onrender.com",
-      github: "https://github.com/divine/sockettalk",
+      github: "https://github.com/dadisodivine/Chatbot",
     },
     {
       id: 6,
@@ -227,7 +229,7 @@ const ProjectDetail = () => {
       ],
       techStack: ["React", "Node.js", "MongoDB", "Stripe", "JWT", "Express"],
       liveDemo: "https://e-store-hw1f.onrender.com",
-      github: "https://github.com/divine/cartify",
+      github: "https://github.com/dadisodivine/Cartify",
     },
   ];
 
