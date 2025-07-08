@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a modern full-stack portfolio web application showcasing AI-powered projects and developer skills. The application features a React-based frontend with a clean, responsive design using shadcn/ui components and Tailwind CSS. The backend is built with Express.js and includes database integration using Drizzle ORM with PostgreSQL.
+This is a modern frontend-only portfolio web application showcasing AI-powered projects and developer skills. The application is built with React and features a clean, responsive design using shadcn/ui components and Tailwind CSS. It's configured as a static site ready for deployment to platforms like Netlify, Vercel, or GitHub Pages.
 
 ## System Architecture
 
@@ -14,25 +14,18 @@ This is a modern full-stack portfolio web application showcasing AI-powered proj
 - **Build Tool**: Vite for fast development and optimized builds
 - **Theme**: Dark/light mode support with system preference detection
 
-### Backend Architecture
-- **Framework**: Express.js with TypeScript
-- **Database**: PostgreSQL with Drizzle ORM
-- **Session Management**: PostgreSQL session store
-- **Development**: Hot reload with Vite middleware integration
-- **Build**: ESBuild for production bundling
+### Architecture
+- **Type**: Frontend-only static application
+- **Development**: Vite development server with hot reload
+- **Build**: Vite build system for optimized production bundles
+- **Deployment**: Static site deployment ready
 
 ## Key Components
 
-### Database Layer
-- **ORM**: Drizzle ORM for type-safe database operations
-- **Schema**: Defined in `shared/schema.ts` with users table including id, username, and password fields
-- **Migrations**: Managed through Drizzle Kit with migrations stored in `./migrations`
-- **Database Provider**: Neon Database for serverless PostgreSQL
-
-### Storage Interface
-- **Abstraction**: IStorage interface for CRUD operations
-- **Implementation**: Memory storage for development (MemStorage class)
-- **User Management**: Basic user creation and retrieval functionality
+### Data Management
+- **Project Data**: Hardcoded project information within components
+- **Contact Form**: Frontend-only form with simulated submission
+- **No Backend**: All functionality runs entirely in the browser
 
 ### UI Components
 - **Component Library**: shadcn/ui with Radix UI primitives
@@ -48,12 +41,11 @@ This is a modern full-stack portfolio web application showcasing AI-powered proj
 
 ## Data Flow
 
-1. **Client Requests**: React Router handles client-side navigation
-2. **API Communication**: React Query manages server state and caching
-3. **Server Processing**: Express.js routes handle API requests
-4. **Data Access**: Storage interface abstracts database operations
-5. **Database Operations**: Drizzle ORM executes type-safe queries
-6. **Response Handling**: JSON responses with appropriate error handling
+1. **Client Navigation**: Wouter handles client-side routing
+2. **State Management**: React hooks manage local component state
+3. **Static Data**: Project information stored within components
+4. **User Interactions**: Form submissions show toast notifications
+5. **Theme Management**: Local storage persistence for dark/light mode
 
 ## External Dependencies
 
@@ -65,11 +57,11 @@ This is a modern full-stack portfolio web application showcasing AI-powered proj
 - **Forms**: React Hook Form with Zod validation
 - **Date Handling**: date-fns for date manipulation
 
-### Backend Dependencies
-- **Database**: @neondatabase/serverless for PostgreSQL connection
-- **ORM**: Drizzle ORM with Zod integration
-- **Session**: connect-pg-simple for PostgreSQL session storage
-- **Development**: tsx for TypeScript execution, various development tools
+### Core Dependencies
+- **Routing**: Wouter for client-side navigation
+- **State Management**: React hooks for local state
+- **Form Handling**: React Hook Form with Zod validation
+- **Notifications**: Sonner for toast notifications
 
 ### Development Tools
 - **Build**: Vite with React plugin and error overlay
@@ -80,21 +72,20 @@ This is a modern full-stack portfolio web application showcasing AI-powered proj
 ## Deployment Strategy
 
 ### Development Environment
-- **Server**: Express.js with Vite middleware for hot reload
-- **Database**: PostgreSQL database with environment-based configuration
-- **Assets**: Vite dev server for frontend assets
-- **Environment**: NODE_ENV=development with appropriate logging
+- **Server**: Vite development server with hot reload
+- **Port**: 5000 (configurable)
+- **Assets**: Served directly by Vite dev server
 
 ### Production Build
-- **Frontend**: Vite build generates optimized static assets
-- **Backend**: ESBuild bundles server code for Node.js execution
-- **Assets**: Static files served from dist/public directory
-- **Database**: Production PostgreSQL with connection pooling
+- **Build Output**: Static files in `dist/` directory
+- **Assets**: Optimized and bundled by Vite
+- **Routing**: Client-side routing with fallback to index.html
 
-### Environment Configuration
-- **Database URL**: Required environment variable for database connection
-- **Session Storage**: PostgreSQL-based session management
-- **Asset Serving**: Conditional static file serving based on environment
+### Static Site Deployment
+- **Netlify**: Ready with netlify.toml configuration
+- **Vercel**: Compatible with default settings
+- **GitHub Pages**: Can be deployed as static site
+- **Any CDN**: Standard static file hosting
 
 ## Changelog
 
@@ -102,6 +93,7 @@ Changelog:
 - July 08, 2025. Initial setup and successful migration from Lovable to Replit
 - July 08, 2025. Fixed CSS import order and font configuration for Poppins font family
 - July 08, 2025. Installed missing dependencies: react-router-dom, sonner
+- July 08, 2025. Converted to frontend-only application, removed backend dependencies
 
 ## User Preferences
 
