@@ -76,6 +76,15 @@
     @apply bg-background text-foreground font-poppins;
   }
 
+  /* Prevent image dragging and improve loading performance */
+  img {
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-poppins;
   }

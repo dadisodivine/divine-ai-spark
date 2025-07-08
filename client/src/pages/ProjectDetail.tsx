@@ -248,7 +248,9 @@ const ProjectDetail = () => {
           <img
             src={project.image}
             alt={project.name}
-            className="w-full h-64 md:h-96 object-cover rounded-lg mb-6"
+            className="w-full h-64 md:h-96 object-cover rounded-lg mb-6 select-none"
+            draggable={false}
+            loading="lazy"
           />
           <div className="grid md:grid-cols-3 gap-8">
             <div className="md:col-span-2">
@@ -307,7 +309,9 @@ const ProjectDetail = () => {
                 key={index}
                 src={screenshot}
                 alt={`${project.name} screenshot ${index + 1}`}
-                className="w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform duration-300"
+                className="w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform duration-300 select-none"
+                draggable={false}
+                loading="lazy"
               />
             ))}
           </div>
