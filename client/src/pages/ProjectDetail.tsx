@@ -165,7 +165,7 @@ const ProjectDetail = () => {
       ],
       techStack: ["React", "Node.js", "Express.js", "Mistral AI", "OpenAI"],
       liveDemo: "https://chatbot-frontend-c7xo.onrender.com",
-      github: "https://github.com/dadisodivine/Chat-App",
+      github: "https://github.com/dadisodivine/Chatbot",
     },
     {
       id: 5,
@@ -195,7 +195,7 @@ const ProjectDetail = () => {
       ],
       techStack: ["React", "Firebase"],
       liveDemo: "https://chat-app-x9f9.onrender.com",
-      github: "https://github.com/dadisodivine/Chatbot",
+      github: "https://github.com/dadisodivine/Chat-App",
     },
     {
       id: 6,

@@ -25,7 +25,7 @@ const Projects = () => {
         "Firebase Auth",
       ],
       liveDemo: "https://gitmate-frontend.onrender.com",
-      github: "https://github.com/divine/gitmate",
+      github: "https://github.com/dadisodivine/GitMate",
     },
     {
       id: 2,
@@ -67,7 +67,7 @@ const Projects = () => {
         "Google Gemini",
       ],
       liveDemo: "https://plantdoc-sruf.onrender.com",
-      github: "https://github.com/divine/plantdoc-ai",
+      github: "https://github.com/dadisodivine/PlantDoc",
     },
     {
       id: 4,
@@ -81,7 +81,7 @@ const Projects = () => {
         "Custom chatbot with advanced prompt engineering and conversation memory.",
       techStack: ["React", "Node.js", "Express.js", "Mistral AI", "OpenAI"],
       liveDemo: "https://chatbot-frontend-c7xo.onrender.com",
-      github: "https://github.com/divine/promptpal",
+      github: "https://github.com/dadisodivine/Chatbot",
     },
     {
       id: 5,
@@ -95,7 +95,7 @@ const Projects = () => {
         "Built with Socket.io for real-time messaging and Firebase for authentication and data persistence.",
       techStack: ["React", "Firebase"],
       liveDemo: "https://chat-app-x9f9.onrender.com",
-      github: "https://github.com/divine/sockettalk",
+      github: "https://github.com/dadisodivine/Chat-App",
     },
     {
       id: 6,
@@ -109,7 +109,7 @@ const Projects = () => {
         "Full-featured online store with cart management, user authentication, and secure checkout.",
       techStack: ["React", "Node.js", "MongoDB", "Stripe", "JWT", "Express"],
       liveDemo: "https://e-store-hw1f.onrender.com",
-      github: "https://github.com/divine/cartify",
+      github: "https://github.com/dadisodivine/Cartify",
     },
   ];
 
