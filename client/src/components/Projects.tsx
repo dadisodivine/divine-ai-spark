@@ -115,6 +115,10 @@ const Projects = () => {
 
   const handleProjectClick = (projectId: number) => {
     setLocation(`/project/${projectId}`);
+    // Small delay to ensure navigation completes before scrolling
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 50);
   };
 
   return (

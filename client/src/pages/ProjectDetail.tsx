@@ -1,10 +1,16 @@
 import { useParams, useLocation } from "wouter";
+import { useEffect } from "react";
 import { ArrowLeft, ExternalLink, Github, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const ProjectDetail = () => {
   const { id } = useParams();
   const [, setLocation] = useLocation();
+
+  // Scroll to top when component mounts or id changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   const projects = [
     {
