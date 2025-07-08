@@ -1,16 +1,27 @@
 import { useParams, useLocation } from "wouter";
-import { useEffect } from "react";
-import { ArrowLeft, ExternalLink, Github, Play } from "lucide-react";
+import { useEffect, useState } from "react";
+import { ArrowLeft, ExternalLink, Github, Play, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const ProjectDetail = () => {
   const { id } = useParams();
   const [, setLocation] = useLocation();
+  const [loadingImages, setLoadingImages] = useState<Record<number, boolean>>({});
+  const [heroImageLoading, setHeroImageLoading] = useState(true);
 
   // Scroll to top when component mounts or id changes
   useEffect(() => {
     window.scrollTo(0, 0);
+    setHeroImageLoading(true); // Reset hero image loading when id changes
   }, [id]);
+
+  const handleImageLoad = (index: number) => {
+    setLoadingImages(prev => ({ ...prev, [index]: false }));
+  };
+
+  const handleImageLoadStart = (index: number) => {
+    setLoadingImages(prev => ({ ...prev, [index]: true }));
+  };
 
   const projects = [
     {
@@ -251,13 +262,22 @@ const ProjectDetail = () => {
 
         {/* Hero section */}
         <div className="mb-8">
-          <img
-            src={project.image}
-            alt={project.name}
-            className="w-full h-64 md:h-96 object-cover rounded-lg mb-6 select-none"
-            draggable={false}
-            loading="lazy"
-          />
+          <div className="relative">
+            {heroImageLoading && (
+              <div className="absolute inset-0 bg-muted rounded-lg flex items-center justify-center z-10 h-64 md:h-96">
+                <Loader2 className="h-12 w-12 animate-spin text-primary" />
+              </div>
+            )}
+            <img
+              src={project.image}
+              alt={project.name}
+              className="w-full h-64 md:h-96 object-cover rounded-lg mb-6 select-none"
+              draggable={false}
+              loading="eager"
+              onLoad={() => setHeroImageLoading(false)}
+              onError={() => setHeroImageLoading(false)}
+            />
+          </div>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="md:col-span-2">
               <h1 className="text-3xl md:text-4xl font-bold gradient-text mb-4">
@@ -311,14 +331,23 @@ const ProjectDetail = () => {
           <h2 className="text-2xl font-bold mb-4">Screenshots</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {project.screenshots.map((screenshot, index) => (
-              <img
-                key={index}
-                src={screenshot}
-                alt={`${project.name} screenshot ${index + 1}`}
-                className="w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform duration-300 select-none"
-                draggable={false}
-                loading="lazy"
-              />
+              <div key={index} className="relative">
+                {loadingImages[index] && (
+                  <div className="absolute inset-0 bg-muted rounded-lg flex items-center justify-center z-10">
+                    <Loader2 className="h-8 w-8 animate-spin text-primary" />
+                  </div>
+                )}
+                <img
+                  src={screenshot}
+                  alt={`${project.name} screenshot ${index + 1}`}
+                  className="w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform duration-300 select-none"
+                  draggable={false}
+                  loading="lazy"
+                  onLoadStart={() => handleImageLoadStart(index)}
+                  onLoad={() => handleImageLoad(index)}
+                  onError={() => handleImageLoad(index)}
+                />
+              </div>
             ))}
           </div>
         </div>

@@ -112,6 +112,22 @@
     51%, 100% { opacity: 0; }
   }
 
+  /* Loading skeleton animation */
+  @keyframes shimmer {
+    0% {
+      background-position: -200px 0;
+    }
+    100% {
+      background-position: calc(200px + 100%) 0;
+    }
+  }
+
+  .skeleton {
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    background-size: 200px 100%;
+    animation: shimmer 1.5s infinite;
+  }
+
   .animate-slide-in-left {
     animation: slideInLeft 0.8s ease-out;
   }
