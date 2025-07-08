@@ -1,8 +1,8 @@
 import { ExternalLink, Github, Play } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation } from 'wouter';
 
 const Projects = () => {
-  const navigate = useNavigate();
+  const [, setLocation] = useLocation();
 
   const projects = [
     {
@@ -74,7 +74,7 @@ const Projects = () => {
   ];
 
   const handleProjectClick = (projectId: number) => {
-    navigate(`/project/${projectId}`);
+    setLocation(`/project/${projectId}`);
   };
 
   return (

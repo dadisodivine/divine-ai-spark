@@ -1,10 +1,10 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useLocation } from "wouter";
 import { ArrowLeft, ExternalLink, Github, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const ProjectDetail = () => {
   const { id } = useParams();
-  const navigate = useNavigate();
+  const [, setLocation] = useLocation();
 
   const projects = [
     {
@@ -210,7 +210,7 @@ const ProjectDetail = () => {
       <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-4">Project Not Found</h1>
-          <Button onClick={() => navigate("/")}>
+          <Button onClick={() => setLocation("/")}>
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Home
           </Button>
@@ -223,7 +223,7 @@ const ProjectDetail = () => {
     <div className="min-h-screen bg-background">
       <div className="max-w-6xl mx-auto px-4 py-8">
         {/* Back button */}
-        <Button variant="ghost" onClick={() => navigate("/")} className="mb-6">
+        <Button variant="ghost" onClick={() => setLocation("/")} className="mb-6">
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back to Projects
         </Button>
