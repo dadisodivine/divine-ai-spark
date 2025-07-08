@@ -11,7 +11,14 @@ const ProjectDetail = () => {
       id: 1,
       name: "GitMate",
       image: "/gitmate (1).png",
-      screenshots: ["/gitmate (1).png", "/gitmate (2).png", "/gitmate (3).png"],
+      screenshots: [
+        "/gitmate (2).png",
+        "/gitmate (3).png",
+        "/gitmate (4).png",
+        "/gitmate (5).png",
+        "/gitmate (6).png",
+        "/gitmate (7).png",
+      ],
       description:
         "An AI-powered developer tool that connects to GitHub, analyzes codebases, and provides intelligent explanations, refactoring suggestions, and code insights.",
       longDescription:
@@ -33,8 +40,9 @@ const ProjectDetail = () => {
         "Node.js",
         "GitHub API",
         "OpenAI",
+        "MistralAI",
         "Express",
-        "MongoDB",
+        "Firebase Auth",
       ],
       liveDemo: "https://gitmate-frontend.onrender.com",
       github: "https://github.com/divine/gitmate",
@@ -77,9 +85,16 @@ const ProjectDetail = () => {
       name: "PlantDoc AI",
       image: "/Plantdoc (1).png",
       screenshots: [
-        "/Plantdoc (1).png",
         "/Plantdoc (2).png",
         "/Plantdoc (3).png",
+        "/Plantdoc (4).png",
+        "/Plantdoc (5).png",
+        "/Plantdoc (6).png",
+        "/Plantdoc (7).png",
+        "/Plantdoc (8).png",
+        "/Plantdoc (9).png",
+        "/Plantdoc (10).png",
+        "/Plantdoc (11).png",
       ],
       description:
         "A plant disease detection tool using advanced image recognition to help African farmers identify and treat crop diseases quickly and accurately.",
@@ -99,11 +114,11 @@ const ProjectDetail = () => {
       ],
       techStack: [
         "React",
-        "TensorFlow.js",
+        "Express.js",
         "Node.js",
-        "Python",
-        "Image Recognition",
-        "Firebase",
+        "Image recognition",
+        "Mistral AI",
+        "Google Gemini",
       ],
       liveDemo: "https://plantdoc-sruf.onrender.com",
       github: "https://github.com/divine/plantdoc-ai",
@@ -112,31 +127,24 @@ const ProjectDetail = () => {
       id: 4,
       name: "SmartChat",
       image: "/Chatbot (1).png",
-      screenshots: ["/Chatbot (1).png", "/Chatbot (2).png", "/Chatbot (3).png"],
+      screenshots: ["/Chatbot (2).png", "/Chatbot (3).png", "/Chatbot (4).png"],
       description:
         "A personalized AI chatbot using LLMs like Mistral and OpenAI, providing intelligent prompt-based assistance for various tasks and conversations.",
       longDescription:
-        "PromptPal is an advanced AI chatbot platform that leverages multiple Large Language Models to provide personalized assistance. The application features sophisticated prompt engineering, conversation memory, and adaptive learning capabilities. Users can customize their AI assistant for specific tasks, from creative writing to technical problem-solving, with the system learning and adapting to individual preferences over time.",
+        "SmartChat is an advanced AI chatbot platform that leverages multiple Large Language Models to provide personalized assistance. The application features sophisticated prompt engineering, conversation memory, and adaptive learning capabilities. Users can customize their AI assistant for specific tasks, from creative writing to technical problem-solving, with the system learning and adapting to individual preferences over time.",
       problem:
         "Users need a personalized AI assistant that understands their specific needs and preferences.",
       solution:
         "Custom chatbot with advanced prompt engineering and conversation memory.",
       features: [
-        "Multi-LLM integration",
+        "Multi-modal",
         "Personalized responses",
         "Conversation memory",
         "Custom prompt templates",
         "Task-specific modes",
         "Learning adaptation",
       ],
-      techStack: [
-        "React",
-        "Node.js",
-        "Mistral AI",
-        "OpenAI",
-        "WebSocket",
-        "Redis",
-      ],
+      techStack: ["React", "Node.js", "Express.js", "Mistral AI", "OpenAI"],
       liveDemo: "https://chatbot-frontend-c7xo.onrender.com",
       github: "https://github.com/divine/promptpal",
     },
@@ -145,9 +153,10 @@ const ProjectDetail = () => {
       name: "Chatter",
       image: "/ChitChat (1).png",
       screenshots: [
-        "/ChitChat (1).png",
         "/ChitChat (2).png",
         "/ChitChat (3).png",
+        "/ChitChat (4).png",
+        "/ChitChat (5).png",
       ],
       description:
         "A real-time chat application with advanced features like file sharing, emoji reactions, and group management using Socket.io and Firebase.",
@@ -165,22 +174,24 @@ const ProjectDetail = () => {
         "User authentication",
         "Cross-platform support",
       ],
-      techStack: [
-        "React",
-        "Socket.io",
-        "Firebase",
-        "Node.js",
-        "Express",
-        "Material-UI",
-      ],
+      techStack: ["React", "Firebase"],
       liveDemo: "https://chat-app-x9f9.onrender.com",
       github: "https://github.com/divine/sockettalk",
     },
     {
       id: 6,
       name: "Cartify",
-      image: "/cartify (4).png",
-      screenshots: ["/cartify (4).png", "/cartify (5).png", "/cartify (6).png"],
+      image: "/cartify (1).png",
+      screenshots: [
+        "/cartify (2).png",
+        "/cartify (3).png",
+        "/cartify (4).png",
+        "/cartify (5).png",
+        "/cartify (6).png",
+        "/cartify (7).png",
+        "/cartify (8).png",
+        "/cartify (9).png",
+      ],
       description:
         "A comprehensive e-commerce platform demonstrating full-stack development with complete CRUD operations, authentication, and payment integration.",
       longDescription:
@@ -223,7 +234,11 @@ const ProjectDetail = () => {
     <div className="min-h-screen bg-background">
       <div className="max-w-6xl mx-auto px-4 py-8">
         {/* Back button */}
-        <Button variant="ghost" onClick={() => setLocation("/")} className="mb-6">
+        <Button
+          variant="ghost"
+          onClick={() => setLocation("/")}
+          className="mb-6"
+        >
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back to Projects
         </Button>
