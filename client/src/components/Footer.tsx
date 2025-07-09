@@ -7,19 +7,19 @@ const Footer = () => {
   const socialLinks = [
     { 
       icon: Github, 
-      href: 'https://github.com/divine', 
+      href: 'https://github.com/dadisodivine', 
       label: 'GitHub',
       color: 'hover:text-gray-400'
     },
     { 
       icon: Linkedin, 
-      href: 'https://linkedin.com/in/divine', 
+      href: 'https://www.linkedin.com/in/divine-d-a50b88324/', 
       label: 'LinkedIn',
       color: 'hover:text-blue-400'
     },
     { 
       icon: Mail, 
-      href: 'mailto:divine@example.com', 
+      href: 'mailto:dadisodivinenherera@gmail.com', 
       label: 'Email',
       color: 'hover:text-red-400'
     },
@@ -83,16 +83,12 @@ const Footer = () => {
             <h4 className="text-base font-semibold">Get In Touch</h4>
             <div className="space-y-1 text-muted-foreground text-sm">
               <p>📍 Harare, Zimbabwe</p>
-              <p>📧 divine@example.com</p>
+              <p>📧 dadisodivinenherera@gmail.com</p>
               <p>🚀 Available for projects</p>
             </div>
             
             {/* Blog placeholder */}
-            <div className="pt-3">
-              <h5 className="font-medium mb-1 text-sm">Coming Soon</h5>
-              <p className="text-xs text-muted-foreground">
-                📝 Tech Blog - Insights on AI, Web Development, and Innovation
-              </p>
+            <div className="pt-3">            
             </div>
           </div>
         </div>
@@ -101,15 +97,11 @@ const Footer = () => {
         <div className="border-t border-border mt-6 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-3">
             <div className="flex items-center gap-2 text-muted-foreground text-sm">
-              <span>© {currentYear} Divine. Made with</span>
+              <span>© {currentYear}. Made with</span>
               <Heart size={14} className="text-red-500" />
-              <span>and lots of ☕</span>
             </div>
             
             <div className="flex items-center gap-3 text-xs text-muted-foreground">
-              <span>Built with React + TypeScript</span>
-              <span>•</span>
-              <span>Styled with Tailwind CSS</span>
             </div>
           </div>
         </div>
