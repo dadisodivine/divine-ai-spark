@@ -40,7 +40,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="space-y-3">
             <h3 className="text-xl font-bold gradient-text">
-              &lt;Divine /&gt;
+              
             </h3>
             <p className="text-muted-foreground leading-relaxed text-sm">
               Full-Stack Developer crafting AI-powered web solutions from Zimbabwe. 
