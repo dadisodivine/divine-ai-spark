@@ -51,7 +51,7 @@ const ProjectDetail = () => {
         "AI-powered code analysis",
         "Intelligent refactoring suggestions",
         "Real-time code explanations",
-        "Automated documentation generation",
+        "Documentation generation",
         "Code quality assessment",
       ],
       techStack: [
@@ -66,39 +66,7 @@ const ProjectDetail = () => {
       liveDemo: "https://gitmate-frontend.onrender.com",
       github: "https://github.com/dadisodivine/GitMate",
     },
-    {
-      id: 2,
-      name: "Vibe Coding AI",
-      image: "/cartify (1).png",
-      screenshots: ["/cartify (1).png", "/cartify (2).png", "/cartify (3).png"],
-      description:
-        "An AI-powered website builder that creates modern web applications through natural language conversations, similar to Lovable but with custom features.",
-      longDescription:
-        "Vibe Coding AI is a revolutionary website builder that transforms the way developers and non-developers create web applications. Through intuitive natural language conversations, users can describe their vision and watch as the AI generates responsive, modern web applications in real-time. The platform combines the power of advanced AI models with cutting-edge web technologies to deliver production-ready applications with custom styling, interactive components, and seamless user experiences.",
-      problem:
-        "Building web applications requires extensive coding knowledge and time investment.",
-      solution:
-        "AI-driven platform that generates responsive web apps from simple text descriptions and requirements.",
-      features: [
-        "Natural language to code generation",
-        "Real-time preview and editing",
-        "Responsive design automation",
-        "Component library integration",
-        "Custom styling and theming",
-        "Export and deployment options",
-      ],
-      techStack: [
-        "React",
-        "TypeScript",
-        "OpenAI",
-        "Tailwind CSS",
-        "Vite",
-        "Node.js",
-      ],
-      liveDemo: "https://vibe-coding-ai.com",
-      github: "https://github.com/divine/vibe-coding-ai",
-      youtube: "https://youtube.com/watch?v=example-vibe",
-    },
+   
     {
       id: 3,
       name: "PlantDoc AI",
@@ -126,10 +94,10 @@ const ProjectDetail = () => {
       features: [
         "Image-based disease detection",
         "Multilingual support",
-        "Offline functionality",
         "Treatment recommendations",
         "Disease history tracking",
         "Local agricultural expert network",
+        "NB :some of these ffeatures are still under development"
       ],
       techStack: [
         "React",
@@ -213,22 +181,21 @@ const ProjectDetail = () => {
         "/cartify (9).png",
       ],
       description:
-        "A comprehensive e-commerce platform demonstrating full-stack development with complete CRUD operations, authentication, and payment integration.",
+        "A comprehensive e-commerce platform demonstrating full-stack development with complete CRUD operations and authentication",
       longDescription:
-        "Cartify is a full-featured e-commerce platform showcasing modern web development practices. The application includes complete product management, user authentication, shopping cart functionality, and secure payment processing. Built with scalability in mind, Cartify demonstrates best practices in full-stack development, from responsive frontend design to robust backend architecture and secure payment integration.",
+        "Cartify is a full-featured e-commerce platform showcasing modern web development practices. The application includes complete product management, user authentication and shopping cart functionality. Built with scalability in mind, Cartify demonstrates best practices in mainly full-stack development, from responsive frontend design to AI powered backend that allows for customer support by a chatbot",
       problem:
         "Showcase complete e-commerce functionality with modern web technologies.",
       solution:
-        "Full-featured online store with cart management, user authentication, and secure checkout.",
+        "Full-featured online store with cart management, user authentication, and AI customer suppport",
       features: [
         "Product catalog management",
         "User authentication",
         "Shopping cart functionality",
-        "Secure payment processing",
-        "Order management",
+        "Customer support bot",
         "Responsive design",
       ],
-      techStack: ["React", "Node.js", "MongoDB", "Stripe", "JWT", "Express"],
+      techStack: ["React", "Node.js", "MongoDB", "JWT", "Express","Fakestore API"],
       liveDemo: "https://e-store-hw1f.onrender.com",
       github: "https://github.com/dadisodivine/Cartify",
     },
