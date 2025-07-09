@@ -55,9 +55,9 @@ const Contact = () => {
     {
       icon: Phone,
       label: 'Phone',
-      value: '+263 XX XXX XXXX',
+      value: '+263 712 761 698',
       color: 'text-green-400',
-      href: 'tel:+263XXXXXXXX'
+      href: 'tel:+263712761698'
     }
   ];
 
@@ -190,10 +190,10 @@ const Contact = () => {
               <p className="text-sm text-muted-foreground text-center">
                 📧 Prefer email? Reach me directly at{' '}
                 <a 
-                  href="mailto:divine@example.com"
+                  href="mailto:dadisodivinenherera@gmail.com"
                   className="text-accent hover:underline font-medium"
                 >
-                  divine@example.com
+                  dadisodivinenherera@.com
                 </a>
               </p>
             </div>
