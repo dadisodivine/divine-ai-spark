@@ -42,7 +42,7 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="text-xl font-bold gradient-text">
-            Divine
+            
           </div>
 
           {/* Right side - Social links and controls */}
