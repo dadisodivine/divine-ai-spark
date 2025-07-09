@@ -68,6 +68,7 @@ const Projects = () => {
       ],
       liveDemo: "https://plantdoc-sruf.onrender.com",
       github: "https://github.com/dadisodivine/PlantDoc",
+      status: "under-development",
     },
     {
       id: 4,
@@ -154,9 +155,16 @@ const Projects = () => {
               </div>
 
               <div className="p-4">
-                <h3 className="text-lg font-bold gradient-text mb-2">
-                  {project.name}
-                </h3>
+                <div className="flex items-center gap-2 mb-2">
+                  <h3 className="text-lg font-bold gradient-text">
+                    {project.name}
+                  </h3>
+                  {project.status === "under-development" && (
+                    <span className="px-2 py-1 bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 text-xs rounded-full border border-orange-200 dark:border-orange-800 font-medium">
+                      Under Development
+                    </span>
+                  )}
+                </div>
 
                 <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
                   {project.description}

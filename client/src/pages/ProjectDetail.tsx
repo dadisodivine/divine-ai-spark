@@ -141,6 +141,7 @@ const ProjectDetail = () => {
       ],
       liveDemo: "https://plantdoc-sruf.onrender.com",
       github: "https://github.com/dadisodivine/PlantDoc",
+      status: "under-development",
     },
     {
       id: 4,
@@ -282,9 +283,16 @@ const ProjectDetail = () => {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="md:col-span-2">
-              <h1 className="text-3xl md:text-4xl font-bold gradient-text mb-4">
-                {project.name}
-              </h1>
+              <div className="flex items-center gap-3 mb-4">
+                <h1 className="text-3xl md:text-4xl font-bold gradient-text">
+                  {project.name}
+                </h1>
+                {project.status === "under-development" && (
+                  <span className="px-3 py-1.5 bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 text-sm rounded-full border border-orange-200 dark:border-orange-800 font-medium">
+                    Under Development
+                  </span>
+                )}
+              </div>
               <p className="text-lg text-muted-foreground mb-6">
                 {project.description}
               </p>
