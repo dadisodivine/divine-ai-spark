@@ -99,12 +99,12 @@ const Hero = () => {
                 
                 {/* Next.js - Bottom Right */}
                 <div className="absolute bottom-1/4 right-0 transform translate-x-4 translate-y-1/2 w-12 h-12 bg-primary/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-primary/30">
-                  <span className="text-primary text-xs font-semibold">Next.js</span>
+                  <span className="text-primary text-xs font-semibold">Express.js</span>
                 </div>
                 
                 {/* Python - Bottom */}
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4 w-12 h-12 bg-primary/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-primary/30">
-                  <span className="text-primary text-xs font-semibold">Python</span>
+                  <span className="text-primary text-xs font-semibold">github</span>
                 </div>
                 
                 {/* MongoDB - Bottom Left */}
@@ -127,22 +127,22 @@ const Hero = () => {
               <div className="absolute inset-8 animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }}>
                 {/* Docker */}
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-10 h-10 bg-accent/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-accent/30">
-                  <span className="text-accent text-xs font-semibold">Docker</span>
+                  <span className="text-accent text-xs font-semibold">OpenAI</span>
                 </div>
                 
                 {/* Git */}
                 <div className="absolute top-1/2 right-0 transform translate-x-2 -translate-y-1/2 w-8 h-8 bg-accent/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-accent/30">
-                  <span className="text-accent text-xs font-semibold">Git</span>
+                  <span className="text-accent text-xs font-semibold">Mistral AI</span>
                 </div>
                 
                 {/* AWS */}
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-2 w-9 h-9 bg-accent/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-accent/30">
-                  <span className="text-accent text-xs font-semibold">AWS</span>
+                  <span className="text-accent text-xs font-semibold">Claude</span>
                 </div>
                 
                 {/* GraphQL */}
                 <div className="absolute top-1/2 left-0 transform -translate-x-2 -translate-y-1/2 w-10 h-10 bg-accent/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-accent/30">
-                  <span className="text-accent text-xs font-semibold">GraphQL</span>
+                  <span className="text-accent text-xs font-semibold">Javascript</span>
                 </div>
               </div>
             </div>
