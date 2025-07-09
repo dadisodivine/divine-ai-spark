@@ -27,27 +27,7 @@ const Projects = () => {
       liveDemo: "https://gitmate-frontend.onrender.com",
       github: "https://github.com/dadisodivine/GitMate",
     },
-    {
-      id: 2,
-      name: "Vibe Coding AI",
-      image: "/cartify (1).png",
-      description:
-        "An AI-powered website builder that creates modern web applications through natural language conversations, similar to Lovable but with custom features.",
-      problem:
-        "Building web applications requires extensive coding knowledge and time investment.",
-      solution:
-        "AI-driven platform that generates responsive web apps from simple text descriptions and requirements.",
-      techStack: [
-        "React",
-        "TypeScript",
-        "OpenAI",
-        "Tailwind CSS",
-        "Vite",
-        "Node.js",
-      ],
-      liveDemo: "https://vibe-coding-ai.com",
-      github: "https://github.com/divine/vibe-coding-ai",
-    },
+
     {
       id: 3,
       name: "PlantDoc AI",
