@@ -149,7 +149,7 @@ const ProjectDetail = () => {
       description:
         "A real-time chat application with advanced features like file sharing, emoji reactions, and group management using Socket.io and Firebase.",
       longDescription:
-        "SocketTalk is a comprehensive real-time communication platform built for modern teams and communities. The application features instant messaging, file sharing, emoji reactions, and advanced group management capabilities. With robust real-time synchronization powered by Socket.io and reliable data persistence through Firebase, SocketTalk provides a seamless communication experience across all devices.",
+        "Chatter is a comprehensive real-time communication platform built for modern teams and communities. The application features instant messaging, file sharing, emoji reactions, and advanced group management capabilities. With robust real-time synchronization powered by Socket.io and reliable data persistence through Firebase, SocketTalk provides a seamless communication experience across all devices.",
       problem:
         "Need for reliable real-time communication platform with modern features.",
       solution:
@@ -158,7 +158,6 @@ const ProjectDetail = () => {
         "Real-time messaging",
         "File sharing",
         "Emoji reactions",
-        "Group management",
         "User authentication",
         "Cross-platform support",
       ],
