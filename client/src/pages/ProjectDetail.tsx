@@ -39,7 +39,7 @@ const ProjectDetail = () => {
         "/gitmate (7).png",
       ],
       description:
-        "An AI-powered developer tool that connects to GitHub, analyzes codebases, and provides intelligent explanations, refactoring suggestions, and code insights.",
+        "An AI-powered developer tool that connects to GitHub, analyzes codebases, and provides intelligent explanations, refactoring suggestions, and code insights.I have been using this app for the lst 4 months to understand repos and have just rrecently made it open source",
       longDescription:
         "GitMate revolutionizes how developers interact with codebases by providing AI-powered insights and analysis. The tool seamlessly integrates with GitHub repositories, offering real-time code explanations, intelligent refactoring suggestions, and comprehensive codebase documentation. Built with modern technologies, GitMate helps developers understand complex code structures, identify potential issues, and improve code quality through AI-driven recommendations.",
       problem:
