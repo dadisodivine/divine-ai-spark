@@ -287,17 +287,6 @@ const ProjectDetail = () => {
                   Code
                 </a>
               </div>
-              {project.youtube && (
-                <a
-                  href={project.youtube}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 border border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition-all duration-300 rounded-lg font-medium w-full justify-center"
-                >
-                  <Play size={16} />
-                  Watch Demo
-                </a>
-              )}
             </div>
           </div>
         </div>
