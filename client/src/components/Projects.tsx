@@ -177,18 +177,24 @@ const Projects = () => {
                     className="flex items-center gap-1 px-3 py-1.5 bg-gradient-to-r from-primary to-accent text-white rounded-md hover:opacity-90 transition-opacity text-xs font-medium flex-1 justify-center"
                   >
                     <ExternalLink size={12} />
-                    Demo
+                    {project.status === "under-development" 
+                      ? "Preview" 
+                      : project.name === "Cartify" 
+                        ? "Demo" 
+                        : "Visit"}
                   </a>
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
-                    className="flex items-center gap-1 px-3 py-1.5 border border-accent text-accent hover:bg-accent hover:text-background transition-all duration-300 rounded-md text-xs font-medium"
-                  >
-                    <Github size={12} />
-                    Code
-                  </a>
+                  {project.status !== "under-development" && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="flex items-center gap-1 px-3 py-1.5 border border-accent text-accent hover:bg-accent hover:text-background transition-all duration-300 rounded-md text-xs font-medium"
+                    >
+                      <Github size={12} />
+                      Code
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
