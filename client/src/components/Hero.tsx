@@ -43,7 +43,7 @@ const Hero = () => {
               <span className="text-primary font-semibold">Zimbabwe</span>, I
               create innovative web applications using modern technologies like
               React, Node.js, and AI integrations to solve real-world problems.
-              Having co-developed <span><a href="https://www.permitprep.co.zw/">PermitPrep</a></span> and the open source tool Gitmate which has over a 100 users as of now
+              Having co-developed <a href="https://www.permitprep.co.zw/" target="_blank" rel="noopener noreferrer" className="text-primary font-semibold hover:text-primary/80 underline decoration-primary/60 hover:decoration-primary transition-all duration-300 hover:scale-105 inline-block">PermitPrep</a> and the open source tool Gitmate which has over a 100 users as of now
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-start items-start mb-12 animate-delayed-fade-in-3">
