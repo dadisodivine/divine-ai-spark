@@ -1,6 +1,6 @@
 import { useParams, useLocation } from "wouter";
 import { useEffect, useState } from "react";
-import { ArrowLeft, ExternalLink, Github, Play, Loader2 } from "lucide-react";
+import { ArrowLeft, ExternalLink, Github, Play, Loader2, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const ProjectDetail = () => {
@@ -10,6 +10,8 @@ const ProjectDetail = () => {
     {},
   );
   const [heroImageLoading, setHeroImageLoading] = useState(true);
+  const [galleryOpen, setGalleryOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   // Scroll to top when component mounts or id changes
   useEffect(() => {
@@ -202,6 +204,42 @@ const ProjectDetail = () => {
 
   const project = projects.find((p) => p.id === parseInt(id || "0"));
 
+  const openGallery = (index: number) => {
+    setCurrentImageIndex(index);
+    setGalleryOpen(true);
+  };
+
+  const closeGallery = () => {
+    setGalleryOpen(false);
+  };
+
+  const nextImage = () => {
+    if (!project) return;
+    setCurrentImageIndex((prev) => 
+      prev === project.screenshots.length - 1 ? 0 : prev + 1
+    );
+  };
+
+  const prevImage = () => {
+    if (!project) return;
+    setCurrentImageIndex((prev) => 
+      prev === 0 ? project.screenshots.length - 1 : prev - 1
+    );
+  };
+
+  const handleKeyDown = (e: KeyboardEvent) => {
+    if (!galleryOpen) return;
+    if (e.key === 'Escape') closeGallery();
+    if (e.key === 'ArrowRight') nextImage();
+    if (e.key === 'ArrowLeft') prevImage();
+  };
+
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [galleryOpen, project]);
+
+
   if (!project) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
@@ -275,17 +313,23 @@ const ProjectDetail = () => {
                   className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-primary to-accent text-white rounded-lg hover:opacity-90 transition-opacity font-medium flex-1 justify-center"
                 >
                   <ExternalLink size={16} />
-                  Live Demo
+                  {project.status === "under-development" 
+                    ? "Preview" 
+                    : project.name === "Cartify" 
+                      ? "Demo" 
+                      : "Visit"}
                 </a>
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 border border-accent text-accent hover:bg-accent hover:text-background transition-all duration-300 rounded-lg font-medium"
-                >
-                  <Github size={16} />
-                  Code
-                </a>
+                {project.status !== "under-development" && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 px-4 py-2 border border-accent text-accent hover:bg-accent hover:text-background transition-all duration-300 rounded-lg font-medium"
+                  >
+                    <Github size={16} />
+                    Code
+                  </a>
+                )}
               </div>
             </div>
           </div>
@@ -296,7 +340,7 @@ const ProjectDetail = () => {
           <h2 className="text-2xl font-bold mb-4">Screenshots</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {project.screenshots.map((screenshot, index) => (
-              <div key={index} className="relative">
+              <div key={index} className="relative cursor-pointer group" onClick={() => openGallery(index)}>
                 {loadingImages[index] && (
                   <div className="absolute inset-0 bg-muted rounded-lg flex items-center justify-center z-10">
                     <Loader2 className="h-8 w-8 animate-spin text-primary" />
@@ -305,13 +349,18 @@ const ProjectDetail = () => {
                 <img
                   src={screenshot}
                   alt={`${project.name} screenshot ${index + 1}`}
-                  className="w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform duration-300 select-none"
+                  className="w-full h-48 object-cover rounded-lg group-hover:scale-105 transition-transform duration-300 select-none"
                   draggable={false}
                   loading="lazy"
                   onLoadStart={() => handleImageLoadStart(index)}
                   onLoad={() => handleImageLoad(index)}
                   onError={() => handleImageLoad(index)}
                 />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-lg flex items-center justify-center">
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/50 rounded-full p-2">
+                    <ExternalLink className="h-6 w-6 text-white" />
+                  </div>
+                </div>
               </div>
             ))}
           </div>
@@ -359,6 +408,50 @@ const ProjectDetail = () => {
             <p className="text-muted-foreground">{project.solution}</p>
           </div>
         </div>
+
+        {/* Image Gallery Modal */}
+        {galleryOpen && (
+          <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center">
+            <div className="relative w-full h-full flex items-center justify-center p-4">
+              {/* Close button */}
+              <button
+                onClick={closeGallery}
+                className="absolute top-4 right-4 z-60 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-colors"
+              >
+                <X className="h-6 w-6" />
+              </button>
+
+              {/* Previous button */}
+              <button
+                onClick={prevImage}
+                className="absolute left-4 z-60 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-colors"
+              >
+                <ChevronLeft className="h-6 w-6" />
+              </button>
+
+              {/* Next button */}
+              <button
+                onClick={nextImage}
+                className="absolute right-4 z-60 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-colors"
+              >
+                <ChevronRight className="h-6 w-6" />
+              </button>
+
+              {/* Main image */}
+              <img
+                src={project.screenshots[currentImageIndex]}
+                alt={`${project.name} screenshot ${currentImageIndex + 1}`}
+                className="max-w-full max-h-full object-contain"
+                onClick={(e) => e.stopPropagation()}
+              />
+
+              {/* Image counter */}
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 bg-black/50 text-white px-3 py-1 rounded-full text-sm">
+                {currentImageIndex + 1} / {project.screenshots.length}
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
