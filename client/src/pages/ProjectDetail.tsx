@@ -144,6 +144,7 @@ const ProjectDetail = () => {
       image: "/ChitChat (1).png",
       screenshots: [
         "/ChitChat (2).png",
+        "/chatty.png",
         "/ChitChat (3).png",
         "/ChitChat (4).png",
         "/ChitChat (5).png",
