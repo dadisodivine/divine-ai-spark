@@ -12,7 +12,7 @@ const Contact = () => {
     email: '',
     message: ''
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -22,20 +22,27 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    
+    // Create email link with form data
+    const subject = encodeURIComponent(`Contact from ${formData.name}`);
+    const body = encodeURIComponent(`Hello Divine,
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
+My name is ${formData.name} and my email is ${formData.email}.
 
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon!",
-    });
+${formData.message}
 
+Best regards,
+${formData.name}`);
+    
+    const emailLink = `mailto:dadisodivinenherera@gmail.com?subject=${subject}&body=${body}`;
+    
+    // Open email client
+    window.location.href = emailLink;
+    
+    // Reset form
     setFormData({ name: '', email: '', message: '' });
-    setIsSubmitting(false);
   };
 
   const contactInfo = [
@@ -169,20 +176,10 @@ const Contact = () => {
 
               <Button
                 type="submit"
-                disabled={isSubmitting}
                 className="w-full btn-primary flex items-center justify-center gap-2"
               >
-                {isSubmitting ? (
-                  <>
-                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
-                    Sending...
-                  </>
-                ) : (
-                  <>
-                    <Send size={20} />
-                    Send Message
-                  </>
-                )}
+                <Send size={20} />
+                Send Email
               </Button>
             </form>
 
