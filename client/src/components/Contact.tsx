@@ -190,7 +190,7 @@ ${formData.name}`);
                   href="mailto:dadisodivinenherera@gmail.com"
                   className="text-accent hover:underline font-medium"
                 >
-                  dadisodivinenherera@.com
+                  dadisodivinenherera@gmail.com
                 </a>
               </p>
             </div>
