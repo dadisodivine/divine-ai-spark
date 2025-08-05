@@ -66,132 +66,108 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right side - Spinning orbit with skill balls */}
+          {/* Right side - Professional Skills Grid */}
           <div className="relative animate-delayed-fade-in-2">
-            {/* Main spinning orbit container */}
+            {/* Professional Skills Display */}
             <div className="relative w-80 h-80 mx-auto">
-              {/* Spinning orbit rings */}
-              <div
-                className="absolute inset-0 rounded-full border-2 border-primary/30 animate-spin"
-                style={{ animationDuration: "20s" }}
-              ></div>
-              <div
-                className="absolute inset-8 rounded-full border border-primary/20 animate-spin"
-                style={{
-                  animationDuration: "15s",
-                  animationDirection: "reverse",
-                }}
-              ></div>
-              <div
-                className="absolute inset-16 rounded-full border border-primary/10 animate-spin"
-                style={{ animationDuration: "25s" }}
-              ></div>
-
-              {/* Center content */}
+              {/* Elegant geometric background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl border border-primary/10 backdrop-blur-sm"></div>
+              
+              {/* Center Focus - AI Expertise */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-primary mb-2">AI</div>
-                  <div className="text-gray-600 dark:text-gray-400 text-sm">
+                <div className="text-center bg-card/80 backdrop-blur-sm rounded-xl p-6 border border-primary/20">
+                  <div className="text-3xl font-bold text-primary mb-2">AI</div>
+                  <div className="text-muted-foreground text-sm font-medium">
                     Generative AI
                   </div>
                 </div>
               </div>
 
-              {/* Spinning skill balls around the orbit */}
-              <div
-                className="absolute inset-0 animate-spin"
-                style={{ animationDuration: "20s" }}
-              >
-                {/* React - Top */}
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-4 w-12 h-12 bg-primary/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-primary/30">
-                  <span className="text-primary text-xs font-semibold">
-                    React
-                  </span>
+              {/* Professional Skill Cards - Positioned strategically */}
+              <div className="absolute inset-0">
+                {/* Frontend Technologies */}
+                <div className="absolute top-4 left-4 group">
+                  <div className="bg-card/90 backdrop-blur-sm rounded-lg p-3 border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                    <span className="text-primary text-sm font-semibold">React</span>
+                  </div>
                 </div>
 
-                {/* Node/Express - Top Right */}
-                <div className="absolute top-1/4 right-0 transform translate-x-4 -translate-y-1/2 w-16 h-12 bg-primary/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-primary/30">
-                  <span className="text-primary text-xs font-semibold">
-                    Node.js
-                  </span>
+                <div className="absolute top-4 right-4 group">
+                  <div className="bg-card/90 backdrop-blur-sm rounded-lg p-3 border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                    <span className="text-primary text-sm font-semibold">TypeScript</span>
+                  </div>
                 </div>
 
-                {/* TypeScript - Right */}
-                <div className="absolute top-1/2 right-0 transform translate-x-4 -translate-y-1/2 w-12 h-12 bg-primary/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-primary/30">
-                  <span className="text-primary text-xs font-semibold">TS</span>
+                {/* Backend Technologies */}
+                <div className="absolute left-4 top-1/2 transform -translate-y-1/2 group">
+                  <div className="bg-card/90 backdrop-blur-sm rounded-lg p-3 border border-accent/20 hover:border-accent/40 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                    <span className="text-accent text-sm font-semibold">Node.js</span>
+                  </div>
                 </div>
 
-                {/* Next.js - Bottom Right */}
-                <div className="absolute bottom-1/4 right-0 transform translate-x-4 translate-y-1/2 w-12 h-12 bg-primary/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-primary/30">
-                  <span className="text-primary text-xs font-semibold">
-                    Express.js
-                  </span>
+                <div className="absolute right-4 top-1/2 transform -translate-y-1/2 group">
+                  <div className="bg-card/90 backdrop-blur-sm rounded-lg p-3 border border-accent/20 hover:border-accent/40 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                    <span className="text-accent text-sm font-semibold">Express</span>
+                  </div>
                 </div>
 
-                {/* Python - Bottom */}
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4 w-12 h-12 bg-primary/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-primary/30">
-                  <span className="text-primary text-xs font-semibold">
-                    github
-                  </span>
+                {/* Database & Tools */}
+                <div className="absolute bottom-4 left-4 group">
+                  <div className="bg-card/90 backdrop-blur-sm rounded-lg p-3 border border-primary/20 hover:border-primary/40 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                    <span className="text-primary text-sm font-semibold">MongoDB</span>
+                  </div>
                 </div>
 
-                {/* MongoDB - Bottom Left */}
-                <div className="absolute bottom-1/4 left-0 transform -translate-x-4 translate-y-1/2 w-16 h-12 bg-primary/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-primary/30">
-                  <span className="text-primary text-xs font-semibold">
-                    MongoDB
-                  </span>
+                <div className="absolute bottom-4 right-4 group">
+                  <div className="bg-card/90 backdrop-blur-sm rounded-lg p-3 border border-accent/20 hover:border-accent/40 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                    <span className="text-accent text-sm font-semibold">GitHub</span>
+                  </div>
                 </div>
 
-                {/* CSS - Left */}
-                <div className="absolute top-1/2 left-0 transform -translate-x-4 -translate-y-1/2 w-12 h-12 bg-primary/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-primary/30">
-                  <span className="text-primary text-xs font-semibold">
-                    CSS
-                  </span>
+                {/* AI Technologies - Floating with subtle animation */}
+                <div className="absolute top-16 left-1/2 transform -translate-x-1/2 group animate-pulse">
+                  <div className="bg-gradient-to-r from-primary/10 to-accent/10 backdrop-blur-sm rounded-lg p-2 border border-primary/30 hover:border-primary/50 transition-all duration-300">
+                    <span className="text-primary text-xs font-medium">OpenAI</span>
+                  </div>
                 </div>
 
-                {/* Firebase - Top Left */}
-                <div className="absolute top-1/4 left-0 transform -translate-x-4 -translate-y-1/2 w-12 h-12 bg-primary/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-primary/30">
-                  <span className="text-primary text-xs font-semibold">
-                    Firebase
-                  </span>
+                <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 group animate-pulse" style={{ animationDelay: "1s" }}>
+                  <div className="bg-gradient-to-r from-accent/10 to-primary/10 backdrop-blur-sm rounded-lg p-2 border border-accent/30 hover:border-accent/50 transition-all duration-300">
+                    <span className="text-accent text-xs font-medium">Claude</span>
+                  </div>
+                </div>
+
+                <div className="absolute top-1/2 left-8 transform -translate-y-1/2 group animate-pulse" style={{ animationDelay: "0.5s" }}>
+                  <div className="bg-gradient-to-r from-primary/10 to-accent/10 backdrop-blur-sm rounded-lg p-2 border border-primary/30 hover:border-primary/50 transition-all duration-300">
+                    <span className="text-primary text-xs font-medium">JavaScript</span>
+                  </div>
+                </div>
+
+                <div className="absolute top-1/2 right-8 transform -translate-y-1/2 group animate-pulse" style={{ animationDelay: "1.5s" }}>
+                  <div className="bg-gradient-to-r from-accent/10 to-primary/10 backdrop-blur-sm rounded-lg p-2 border border-accent/30 hover:border-accent/50 transition-all duration-300">
+                    <span className="text-accent text-xs font-medium">Firebase</span>
+                  </div>
                 </div>
               </div>
 
-              {/* Counter-spinning inner skill balls */}
-              <div
-                className="absolute inset-8 animate-spin"
-                style={{
-                  animationDuration: "15s",
-                  animationDirection: "reverse",
-                }}
-              >
-                {/* Docker */}
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-10 h-10 bg-accent/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-accent/30">
-                  <span className="text-accent text-xs font-semibold">
-                    OpenAI
-                  </span>
-                </div>
-
-                {/* Git */}
-                <div className="absolute top-1/2 right-0 transform translate-x-2 -translate-y-1/2 w-8 h-8 bg-accent/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-accent/30">
-                  <span className="text-accent text-xs font-semibold">
-                    Mistral AI
-                  </span>
-                </div>
-
-                {/* AWS */}
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-2 w-9 h-9 bg-accent/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-accent/30">
-                  <span className="text-accent text-xs font-semibold">
-                    Claude
-                  </span>
-                </div>
-
-                {/* GraphQL */}
-                <div className="absolute top-1/2 left-0 transform -translate-x-2 -translate-y-1/2 w-10 h-10 bg-accent/15 backdrop-blur-sm rounded-full flex items-center justify-center border border-accent/30">
-                  <span className="text-accent text-xs font-semibold">
-                    Javascript
-                  </span>
-                </div>
+              {/* Subtle connecting lines */}
+              <div className="absolute inset-0 opacity-20">
+                <svg className="w-full h-full" viewBox="0 0 320 320">
+                  <defs>
+                    <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="currentColor" className="text-primary" />
+                      <stop offset="100%" stopColor="currentColor" className="text-accent" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M 60 60 Q 160 80 260 60 Q 280 160 260 260 Q 160 280 60 260 Q 40 160 60 60"
+                    fill="none"
+                    stroke="url(#lineGradient)"
+                    strokeWidth="1"
+                    strokeDasharray="5,5"
+                    className="animate-pulse"
+                  />
+                </svg>
               </div>
             </div>
           </div>
