@@ -97,7 +97,7 @@ const Footer = () => {
         <div className="border-t border-border mt-6 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-3">
             <div className="flex items-center gap-2 text-muted-foreground text-sm">
-              <span>© {currentYear}. Made with passion</span>
+              <span>© {currentYear}. Made by Dadiso</span>
             </div>
             
             <div className="flex items-center gap-3 text-xs text-muted-foreground">
